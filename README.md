@@ -1,4 +1,4 @@
-Kitab Club is a full-stack project created by Node JS, Tailwind CSS, and PUG templates.
+Kitab Club is a full-stack project created by Node JS, MongoDB, Express, Tailwind CSS, and PUG templates.
 
 The project is a club for book reading and discussion.
 
