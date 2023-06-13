@@ -1,0 +1,15 @@
+{
+  "name": "kitab-club",
+  "version": "1.0.0",
+  "description": "Kitab Club - a full-stack website",
+  "main": "index.js",
+  "scripts": {
+    "start": "tailwindcss -i ./public/style.css -o ./public/css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "Asma Abed",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
