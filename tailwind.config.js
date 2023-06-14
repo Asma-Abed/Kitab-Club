@@ -12,6 +12,11 @@ module.exports = {
       colors: {
         colorPrimary: '#F98E54',
         colorSecondary: '#093D65',
+        colorText: '#222',
+      },
+      spacing: {
+        w: '500px',
+        h: '333px',
       },
     },
   },

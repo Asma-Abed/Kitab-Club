@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="img/logo.png" />
     <title>Kitab Club</title>
   </head>
-  <body class="text-lg">
+  <body class="text-lg text-colorText">
     <header
       class="max-w-screen-xl mx-auto flex items-center justify-between mb-24 mt-4"
     >
@@ -90,17 +90,32 @@
         <h3 class="text-center text-4xl uppercase text-colorSecondary mb-14">
           How It Works
         </h3>
-        <div>
-          <p>Sign up and choose clubs you love</p>
-          <img src="" alt="" />
+        <div class="flex items-center mx-24 gap-44 mb-20">
+          <div>
+            <p class="text-5xl">Sign up and choose clubs</p>
+            <p class="text-5xl mt-4">you love</p>
+          </div>
+          <div class="w-w h-h">
+            <img src="img/how-1.jpg" alt="" />
+          </div>
         </div>
-        <div>
-          <img src="" alt="" />
-          <p>You get access to all the books in each club</p>
+        <div class="flex items-center mx-24 gap-44 mb-20">
+          <div class="w-w h-h">
+            <img src="img/how-2.jpg" alt="" />
+          </div>
+          <div>
+            <p class="text-5xl">You get access to all the</p>
+            <p class="text-5xl mt-4">books in each club</p>
+          </div>
         </div>
-        <div>
-          <p>Start reading and discussing with club members</p>
-          <img src="" alt="" />
+        <div class="flex items-center mx-24 gap-48">
+          <div>
+            <p class="text-5xl">Start reading with club</p>
+            <p class="text-5xl mt-4">members</p>
+          </div>
+          <div class="w-w h-h">
+            <img src="img/how-3.jpg" alt="" />
+          </div>
         </div>
       </section>
       <section class="max-w-screen-xl mx-auto mb-28">
@@ -111,45 +126,78 @@
           <div
             class="w-72 h-96 border-colorSecondary border-2 rounded text-center relative"
           >
-            <p class="text-5xl text-colorPrimary my-4">$0.00</p>
-            <ul class="text-start">
+            <p class="text-2xl mt-4">Free</p>
+            <p class="text-5xl text-colorPrimary mt-4 mb-8">$0.00</p>
+            <ul class="text-start p-6">
               <li>
-                <img src="" alt="" />
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+
                 <span>1 club per time</span>
               </li>
               <li>
-                <img src="" alt="" />
-                <span></span>
-              </li>
-              <li>
-                <img src="" alt="" />
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-x"></use>
+                </svg>
                 <span>No books access</span>
               </li>
             </ul>
             <a
               class="px-3 py-1.5 w-44 bg-colorPrimary rounded absolute top-80 right-1/2 translate-x-1/2"
               href="#"
-              >Free</a
+              >Subscribe</a
             >
           </div>
           <div
             class="w-72 h-96 border-colorSecondary border-2 rounded text-center relative"
           >
-            <p class="text-5xl text-colorPrimary mt-4">$3.99</p>
+            <p class="text-2xl mt-4">Standard</p>
+            <p class="text-5xl text-colorPrimary mt-4 mb-8">$3.99</p>
+            <ul class="text-start p-6">
+              <li>
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+
+                <span>1 club per time</span>
+              </li>
+              <li>
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <span>Access to free books</span>
+              </li>
+            </ul>
             <a
               class="px-3 py-1.5 w-44 bg-colorPrimary rounded absolute top-80 right-1/2 translate-x-1/2"
               href="#"
-              >Standard</a
+              >Subscribe</a
             >
           </div>
           <div
             class="w-72 h-96 border-colorSecondary border-2 rounded text-center relative"
           >
-            <p class="text-5xl text-colorPrimary mt-4">$5.99</p>
+            <p class="text-2xl mt-4">Premium</p>
+            <p class="text-5xl text-colorPrimary mt-4 mb-8">$5.99</p>
+            <ul class="text-start p-6">
+              <li>
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <span>3 club per time</span>
+              </li>
+              <li>
+                <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <span>Access to free books</span>
+              </li>
+            </ul>
             <a
               class="px-3 py-1.5 w-44 bg-colorPrimary rounded absolute top-80 right-1/2 translate-x-1/2"
               href="#"
-              >Premium</a
+              >Subscribe</a
             >
           </div>
         </div>
@@ -158,7 +206,43 @@
         <h3 class="text-center text-4xl uppercase text-colorSecondary mb-14">
           Why Choose Kitab Club
         </h3>
+        <ul class="px-28 flex flex-col gap-6 text-xl">
+          <li>
+            <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+              <use xlink:href="img/sprite.svg#icon-check"></use>
+            </svg>
+            <span>Organized reading per topic.</span>
+          </li>
+          <li>
+            <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+              <use xlink:href="img/sprite.svg#icon-check"></use>
+            </svg>
+            <span>Access books in each club with no extra fees.</span>
+          </li>
+          <li>
+            <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+              <use xlink:href="img/sprite.svg#icon-check"></use>
+            </svg>
+            <span>Manager will put a schedule suitable for you.</span>
+          </li>
+          <li>
+            <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+              <use xlink:href="img/sprite.svg#icon-check"></use>
+            </svg>
+            <span>Enjoy meaningful discussions about books you love.</span>
+          </li>
+          <li>
+            <svg class="w-6 h-6 inline-block fill-colorPrimary mr-2">
+              <use xlink:href="img/sprite.svg#icon-check"></use>
+            </svg>
+            <span
+              >Our free plan is made for people who can get the books by
+              themselves but want to enjoy reading with others.</span
+            >
+          </li>
+        </ul>
       </section>
+      <footer></footer>
     </main>
   </body>
 </html>
