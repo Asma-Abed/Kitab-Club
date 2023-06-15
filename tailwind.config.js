@@ -17,6 +17,7 @@ module.exports = {
       spacing: {
         w: '500px',
         h: '333px',
+        ml: '492px',
       },
     },
   },

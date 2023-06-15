@@ -1,0 +1,20 @@
+[
+  {
+    "title": "1984",
+    "quote": "If you want a picture of the future, imagine a boot stamping on a human face—for ever.",
+    "image": "book-1.png",
+    "description": "1984 by George Orwell: A haunting dystopian novel unveiling a totalitarian society. It explores government surveillance, manipulation, and the indomitable spirit's fight for individuality and freedom. A prophetic masterpiece that raises questions about power, control, and the fragility of truth.",
+    "Author": "George Orwell",
+    "Page Count": 275,
+    "Originally published": 1949,
+    "Estimated Reading Time": 6,
+    "club": "",
+    "ideas": [
+      "Dystopian surveillance state controls minds and erases individuality.",
+      "Prophetic warning about the dangers of totalitarianism and government manipulation.",
+      "Exploration of the power of language and the distortion of truth.",
+      "A harrowing examination of the human spirit's resilience and the fight for freedom."
+    ],
+    "reviews": []
+  }
+]
