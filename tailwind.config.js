@@ -19,7 +19,7 @@ module.exports = {
         h: '333px',
         w2: '256px',
         h2: '342px',
-        h3: '300px',
+        h3: '400px',
         wl: '900px',
         hl: '500px',
         ml: '492px',

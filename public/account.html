@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <title>My account</title>
+  </head>
+  <body class="text-lg text-colorText">
+    <header
+      class="max-w-screen-xl mx-auto flex items-center justify-between mb-24 mt-4"
+    >
+      <div>
+        <img class="w-16" src="img/logo-color.png" alt="logo" />
+      </div>
+      <nav class="">
+        <ul class="flex gap-8">
+          <li><a href="#">Clubs</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <a class="px-3 py-1.5 bg-colorPrimary rounded font-semibold" href="#"
+        >Register</a
+      >
+    </header>
+    <main>
+      <section class="max-w-screen-xl mx-auto mb-28">
+        <h3 class="text-center text-4xl uppercase text-colorSecondary mb-14">
+          Update your settings
+        </h3>
+        <div class="flex flex-col gap-20 mx-16">
+          <div class="w-3/4 h-h3 border-colorPrimary border-2 rounded mx-auto">
+            <form class="flex gap-20 mb-6 mt-4 mx-8">
+              <div class="w-1/2 flex flex-col gap-6">
+                <div class="flex flex-col">
+                  <label for="email">Name</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="email"
+                    id="email"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="flex flex-col mb-2">
+                  <label for="email">Email</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="flex items-center justify-start gap-6">
+                  <div>
+                    <img
+                      class="w-20 rounded-full"
+                      src="img/member-1-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <label
+                    class="inline-block w-44 h-8 border-2 border-colorSecondary rounded cursor-pointer text-center"
+                    for="photo"
+                    >Upload photo</label
+                  >
+                  <input
+                    class="opacity-0 cursor-pointer absolute w-36 h-8 overflow-hidden -z-10"
+                    type="file"
+                    id="photo"
+                    accept="image/*"
+                  />
+                </div>
+              </div>
+              <div class="w-1/2 flex flex-col gap-6">
+                <div class="flex flex-col">
+                  <label for="email">Profession</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="email"
+                    id="email"
+                    placeholder="Enter your profession"
+                  />
+                </div>
+                <div class="flex flex-col mb-2">
+                  <label for="bio">Bio</label>
+                  <textarea
+                    class="border-colorSecondary border-2 rounded w-full px-3"
+                    type="text"
+                    id="bio"
+                    rows="5"
+                    maxlength="250"
+                    placeholder="Tell us about yourself"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+            <div class="text-center">
+              <a
+                class="px-3 py-1.5 w-1/2 h-10 bg-colorPrimary rounded inline-block text-center"
+                href="#"
+                >Save settings</a
+              >
+            </div>
+          </div>
+          <div
+            class="w-1/2 h-h3 border-colorPrimary border-2 rounded text-center mx-auto"
+          >
+            <form class="flex flex-col gap-6 mb-10 mt-4">
+              <div class="flex flex-col items-center">
+                <label for="password">Current password</label>
+                <input
+                  class="border-colorSecondary border-2 rounded w-2/3 h-10 px-3"
+                  type="password"
+                  id="passowrd"
+                  placeholder="••••••••"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <label for="password">New password</label>
+                <input
+                  class="border-colorSecondary border-2 rounded w-2/3 h-10 px-3"
+                  type="password"
+                  id="passowrd"
+                  placeholder="••••••••"
+                />
+              </div>
+              <div class="flex flex-col items-center">
+                <label for="password">Confirm password</label>
+                <input
+                  class="border-colorSecondary border-2 rounded w-2/3 h-10 px-3"
+                  type="password"
+                  id="passowrd"
+                  placeholder="••••••••"
+                />
+              </div>
+            </form>
+            <a
+              class="px-3 py-1.5 w-2/3 h-10 bg-colorPrimary rounded inline-block"
+              href="#"
+              >Save password</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="max-w-screen-xl mx-auto mb-28">
+        <h3 class="text-center text-4xl uppercase text-colorSecondary mb-14">
+          My clubs
+        </h3>
+        <div class="flex gap-40 justify-center mb-14">
+          <div
+            class="w-72 h-96 border-colorPrimary border-2 rounded text-center relative"
+          >
+            <img class="" src="img/club-1.jpg" alt="" />
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded absolute top-80 right-1/2 translate-x-1/2"
+              href="#"
+              >The Reading Rebels</a
+            >
+          </div>
+          <div
+            class="w-72 h-96 border-colorPrimary border-2 rounded text-center relative"
+          >
+            <img src="img/club-2.jpg" alt="" />
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded absolute top-80 right-1/2 translate-x-1/2"
+              href="#"
+              >The Web Wizards</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="max-w-screen-xl mx-auto mb-28">
+        <h3 class="text-center text-4xl uppercase text-colorSecondary mb-14">
+          Books I've read
+        </h3>
+        <div class="flex gap-40 justify-center mb-14">
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+        </div>
+        <div class="flex gap-40 justify-center mb-14">
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+          <div
+            class="w-64 h-96 border-colorPrimary border-2 rounded text-center flex flex-col items-center"
+          >
+            <div class="my-6 text-xl">
+              <h4>1984</h4>
+              <p>George Orwell</p>
+            </div>
+            <div class="w-32 mb-8">
+              <img class="" src="img/book-1.png" alt="" />
+            </div>
+            <a
+              class="px-3 py-1.5 w-56 bg-colorSecondary text-white rounded"
+              href="#"
+              >See Book Details</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
