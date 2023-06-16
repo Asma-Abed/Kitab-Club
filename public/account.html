@@ -36,10 +36,10 @@
           Update your settings
         </h3>
         <div class="flex flex-col gap-20 mx-16">
-          <div class="w-3/4 h-h3 border-colorPrimary border-2 rounded mx-auto">
-            <form class="flex gap-20 mb-6 mt-4 mx-8">
+          <div class="w-3/4 h-h4 border-colorPrimary border-2 rounded mx-auto">
+            <form class="flex gap-20 mb-10 mt-4 mx-8">
               <div class="w-1/2 flex flex-col gap-6">
-                <div class="flex flex-col">
+                <div class="flex flex-col mb-2">
                   <label for="email">Name</label>
                   <input
                     class="border-colorSecondary border-2 rounded w-full h-10 px-3"
@@ -57,11 +57,20 @@
                     placeholder="Email"
                   />
                 </div>
+                <div class="flex flex-col mb-8">
+                  <label for="email">Profession</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="email"
+                    id="email"
+                    placeholder="Enter your profession"
+                  />
+                </div>
                 <div class="flex items-center justify-start gap-6">
                   <div>
                     <img
                       class="w-20 rounded-full"
-                      src="img/member-1-1.jpg"
+                      src="img/member-1.jpg"
                       alt=""
                     />
                   </div>
@@ -78,17 +87,8 @@
                   />
                 </div>
               </div>
-              <div class="w-1/2 flex flex-col gap-6">
+              <div class="w-1/2 flex flex-col gap-4">
                 <div class="flex flex-col">
-                  <label for="email">Profession</label>
-                  <input
-                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
-                    type="email"
-                    id="email"
-                    placeholder="Enter your profession"
-                  />
-                </div>
-                <div class="flex flex-col mb-2">
                   <label for="bio">Bio</label>
                   <textarea
                     class="border-colorSecondary border-2 rounded w-full px-3"
@@ -98,6 +98,36 @@
                     maxlength="250"
                     placeholder="Tell us about yourself"
                   ></textarea>
+                </div>
+                <div class="flex flex-col">
+                  <label for="urlfb">Facebook</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="url"
+                    id="urlfb"
+                    placeholder="https://facebook.com/username"
+                    pattern="https://.*"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <label for="urlin">Instagram</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="url"
+                    id="urlin"
+                    placeholder="https://instagram.com/username"
+                    pattern="https://.*"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <label for="urltw">Twitter</label>
+                  <input
+                    class="border-colorSecondary border-2 rounded w-full h-10 px-3"
+                    type="url"
+                    id="urltw"
+                    placeholder="https://twitter.com/username"
+                    pattern="https://.*"
+                  />
                 </div>
               </div>
             </form>
