@@ -14,68 +14,81 @@
       "Prophetic warning about the dangers of totalitarianism and government manipulation.",
       "Exploration of the power of language and the distortion of truth.",
       "A harrowing examination of the human spirit's resilience and the fight for freedom."
-    ],
-    "reviews": []
+    ]
   },
   {
-    "title": "A People's History of the United States",
-    "quote": "History is a weapon, and the people's history is the most powerful of all.",
+    "title": "Brave New World",
+    "quote": "Actual happiness always looks pretty squalid in comparison with the overcompensations for misery.",
     "image": "book-2.png",
-    "description": "A People's History of the United States by Howard Zinn: A groundbreaking account that presents history from the perspective of marginalized voices...",
-    "Author": "Howard Zinn",
-    "Page Count": 729,
-    "Originally published": 1980,
-    "Estimated Reading Time": 14,
+    "description": "Brave New World by Aldous Huxley: A dystopian novel set in a future society where human reproduction, conditioning, and drug-induced happiness are meticulously controlled. It delves into themes of conformity, individuality, and the cost of sacrificing personal freedom for societal stability.",
+    "Author": "Aldous Huxley",
+    "Page Count": 288,
+    "Originally published": 1932,
+    "Estimated Reading Time": 7,
     "club": "",
     "ideas": [
-      "Uncover the untold stories of marginalized communities throughout history.",
-      "Challenge conventional narratives and explore alternative perspectives.",
-      "Reflect on the impact of power structures and social movements on historical events.",
-      "Engage in discussions about activism, social justice, and historical change."
-    ],
-    "reviews": []
+      "Comparison of different dystopian visions: '1984' and 'Brave New World'.",
+      "Exploration of the effects of societal control on individuality and freedom.",
+      "Analysis of the role of technology and science in shaping dystopian societies.",
+      "Consideration of the ethical implications of manipulating human behavior and emotions."
+    ]
+  },
+  {
+    "title": "Fahrenheit 451",
+    "quote": "We cannot tell the precise moment when friendship is formed. As in filling a vessel drop by drop, there is at last a drop which makes it run over.",
+    "image": "book-3.png",
+    "description": "Fahrenheit 451 by Ray Bradbury: In a society where books are banned and burned, one man defies the system by preserving literature and questioning the status quo. This thought-provoking dystopian novel explores the suppression of knowledge, the power of books, and the importance of critical thinking.",
+    "Author": "Ray Bradbury",
+    "Page Count": 249,
+    "Originally published": 1953,
+    "Estimated Reading Time": 6,
+    "club": "",
+    "ideas": [
+      "Examining the role of censorship and the suppression of knowledge in '1984' and 'Fahrenheit 451'.",
+      "Exploration of the transformative power of literature and the freedom of thought.",
+      "Discussion on the impact of technology on human relationships and intellectual development.",
+      "Analysis of the protagonist's journey from conformity to rebellion and the pursuit of truth."
+    ]
   },
   {
     "title": "The Republic",
-    "quote": "Until philosophers are kings, or the kings and princes of this world have the spirit and power of philosophy, and political greatness and wisdom meet in one, and those commoner natures who pursue either to the exclusion of the other are compelled to stand aside, cities will never have rest from their evils.",
-    "image": "book-3.png",
-    "description": "The Republic by Plato: A seminal work of political philosophy that explores the concept of an ideal society and the nature of justice...",
+    "quote": "The heaviest penalty for declining to rule is to be ruled by someone inferior to yourself.",
+    "image": "book-4.png",
+    "description": "The Republic by Plato: A Socratic dialogue delving into justice, the ideal state, and the role of philosophy in governance. It explores forms of government, education, and the philosopher-king. Plato presents a vision of a just society, examining virtue, democracy, and the role of the individual within the community.",
     "Author": "Plato",
-    "Page Count": 416,
+    "Page Count": 380,
     "Originally published": -380,
-    "Estimated Reading Time": 9,
+    "Estimated Reading Time": 4,
     "club": "",
     "ideas": [
-      "Examine the philosophical foundations of governance and political systems.",
-      "Explore the concepts of justice, morality, and the role of the state.",
-      "Reflect on the relevance of Plato's ideas in contemporary society.",
-      "Discuss the implications of utopian visions and the challenges of implementing them."
-    ],
-    "reviews": []
+      "Comparative analysis of Plato's 'The Republic' and Machiavelli's 'The Prince' in terms of political theories.",
+      "Discussion on the ideal state and the qualities of a just ruler.",
+      "Exploration of the role of education and philosophy in shaping a harmonious society.",
+      "Evaluation of the concept of the philosopher-king and its applicability in modern governance."
+    ]
   },
   {
     "title": "The Prince",
     "quote": "It is much safer to be feared than loved if one cannot be both.",
-    "image": "book-4.png",
-    "description": "The Prince by Niccolò Machiavelli: A treatise on political power, providing guidance for rulers and leaders...",
+    "image": "book-5.png",
+    "description": "The Prince by Niccolò Machiavelli: A treatise on political power, guiding rulers and leaders. It explores acquisition, maintenance, and use of power, emphasizing pragmatism and ruthlessness. Machiavelli draws on history to offer insights into statecraft, diplomacy, and the art of war, presenting a candid and controversial analysis of political realities and leadership complexities.",
     "Author": "Niccolò Machiavelli",
     "Page Count": 140,
     "Originally published": 1532,
     "Estimated Reading Time": 3,
     "club": "",
     "ideas": [
-      "Explore the moral and ethical implications of Machiavelli's political theories.",
-      "Discuss the relationship between power, leadership, and morality.",
-      "Analyze the historical context and influence of 'The Prince'.",
-      "Consider the relevance of Machiavelli's ideas in contemporary politics."
-    ],
-    "reviews": []
+      "Exploration of the moral and ethical implications of Machiavelli's political theories.",
+      "Discussing the relationship between power, leadership, and morality.",
+      "Analyzing the historical context and influence of 'The Prince'.",
+      "Considering the relevance of Machiavelli's ideas in contemporary politics."
+    ]
   },
   {
     "title": "Eloquent JavaScript",
     "quote": "The best way to learn JavaScript is by doing it.",
-    "image": "book-5.png",
-    "description": "Eloquent JavaScript by Marijn Haverbeke: A comprehensive guide to JavaScript programming...",
+    "image": "book-6.png",
+    "description": "Eloquent JavaScript by Marijn Haverbeke: A comprehensive guide to JavaScript programming, providing clear explanations and practical examples. Learn fundamental concepts and explore advanced topics like asynchronous programming and functional programming. Empower yourself to create dynamic web applications.",
     "Author": "Marijn Haverbeke",
     "Page Count": 472,
     "Originally published": 2011,
@@ -86,14 +99,13 @@
       "Explore advanced topics such as closures, prototypes, and functional programming.",
       "Learn about modern JavaScript frameworks and libraries.",
       "Build interactive web applications and enhance your web development skills."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "HTML and CSS: Design and Build Websites",
     "quote": "Learn to build websites from scratch.",
-    "image": "book-6.png",
-    "description": "HTML and CSS: Design and Build Websites by Jon Duckett: A beginner-friendly guide to web design and development...",
+    "image": "book-7.png",
+    "description": "HTML and CSS: Design and Build Websites by Jon Duckett: An essential introduction to web design using HTML and CSS. Learn the basics and create attractive, responsive websites. Ideal for beginners, this book brings your design ideas to life on the web.",
     "Author": "Jon Duckett",
     "Page Count": 490,
     "Originally published": 2011,
@@ -104,14 +116,13 @@
       "Create visually appealing and responsive websites.",
       "Learn best practices for structuring and styling web pages.",
       "Explore the latest trends and techniques in web design."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "JavaScript: The Good Parts",
     "quote": "JavaScript, the world's most misunderstood programming language.",
-    "image": "book-7.png",
-    "description": "JavaScript: The Good Parts by Douglas Crockford: A concise guide that focuses on the good parts of JavaScript...",
+    "image": "book-8.png",
+    "description": "JavaScript: The Good Parts by Douglas Crockford: A concise guide focusing on the best aspects of JavaScript. Discover the core principles and master the language's expressive power. Unleash your potential and write high-quality code.",
     "Author": "Douglas Crockford",
     "Page Count": 176,
     "Originally published": 2008,
@@ -122,14 +133,13 @@
       "Avoid common pitfalls and problematic parts of the language.",
       "Understand the principles of functional programming in JavaScript.",
       "Enhance your code quality and maintainability with best practices."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "CSS Secrets",
     "quote": "In CSS, there are no secrets.",
-    "image": "book-8.png",
-    "description": "CSS Secrets by Lea Verou: An advanced guide to CSS techniques and best practices...",
+    "image": "book-9.png",
+    "description": "CSS Secrets by Lea Verou: Unlock the power of CSS with this collection of innovative techniques and solutions. Discover hidden gems and practical tips to enhance your web designs. Dive deep into CSS and uncover the secrets to creating stunning and engaging websites.",
     "Author": "Lea Verou",
     "Page Count": 392,
     "Originally published": 2015,
@@ -140,14 +150,13 @@
       "Explore the power of CSS preprocessors and postprocessors.",
       "Learn creative ways to solve common layout and design challenges.",
       "Stay up to date with the latest CSS trends and browser compatibility."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Learning Web Design",
     "quote": "Everything you need to know to create professional websites.",
-    "image": "book-9.png",
-    "description": "Learning Web Design by Jennifer Niederst Robbins: A comprehensive introduction to web design...",
+    "image": "book-10.png",
+    "description": "Learning Web Design by Jennifer Robbins: A comprehensive guide for beginners to learn the essentials of web design. From HTML and CSS basics to responsive design principles, this book provides step-by-step instructions and hands-on exercises. Build a solid foundation in web design and unleash your creativity on the web.",
     "Author": "Jennifer Niederst Robbins",
     "Page Count": 624,
     "Originally published": 2007,
@@ -158,14 +167,13 @@
       "Explore the principles of user experience (UX) and user interface (UI) design.",
       "Gain practical skills in planning, prototyping, and launching websites.",
       "Discover resources and tools to support your web design journey."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Man's Search for Meaning",
     "quote": "When we are no longer able to change a situation, we are challenged to change ourselves.",
-    "image": "book-10.png",
-    "description": "Man's Search for Meaning by Viktor E. Frankl: A powerful memoir and exploration of finding meaning in life...",
+    "image": "book-11.png",
+    "description": "Man's Search for Meaning by Viktor E. Frankl: A memoir and exploration of the human spirit in Nazi concentration camps. It delves into the search for meaning in life, highlighting resilience and the pursuit of happiness.",
     "Author": "Viktor E. Frankl",
     "Page Count": 184,
     "Originally published": 1946,
@@ -176,14 +184,13 @@
       "Explore the resilience of the human spirit in the face of adversity.",
       "Consider the role of personal values and beliefs in finding meaning.",
       "Discuss the impact of Frankl's experiences on psychology and existential philosophy."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Alchemist",
     "quote": "And, when you want something, all the universe conspires in helping you to achieve it.",
-    "image": "book-11.png",
-    "description": "The Alchemist by Paulo Coelho: A philosophical and inspirational novel about following one's dreams...",
+    "image": "book-12.png",
+    "description": "The Alchemist by Paulo Coelho: A captivating tale of self-discovery and destiny. Join a young shepherd as he embarks on a transformative journey, unraveling the secrets of the universe and pursuing his dreams. Through beautiful storytelling, Coelho inspires readers to listen to their hearts, embrace life's challenges, and find their true purpose.",
     "Author": "Paulo Coelho",
     "Page Count": 197,
     "Originally published": 1988,
@@ -194,14 +201,13 @@
       "Explore themes of self-discovery, destiny, and the journey of life.",
       "Discuss the symbolic elements and allegorical nature of the story.",
       "Consider the impact of The Alchemist on readers' lives and perspectives."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Educated",
     "quote": "She got her education with sheer determination and a thirst for knowledge.",
-    "image": "book-12.png",
-    "description": "Educated by Tara Westover: A memoir of resilience and the power of education to transform lives...",
+    "image": "book-13.png",
+    "description": "Educated by Tara Westover: A powerful memoir of resilience and the transformative power of education. Follow Tara's remarkable journey from an isolated upbringing in rural Idaho to a quest for knowledge and self-discovery. This inspiring narrative explores the strength of the human spirit and the profound impact education can have on shaping one's identity and future.",
     "Author": "Tara Westover",
     "Page Count": 334,
     "Originally published": 2018,
@@ -212,32 +218,30 @@
       "Explore the complexities of family dynamics and personal identity.",
       "Reflect on the importance of critical thinking and intellectual curiosity.",
       "Consider the role of education in overcoming societal barriers."
-    ],
-    "reviews": []
+    ]
   },
   {
-    "title": "Sapiens: A Brief History of Humankind",
-    "quote": "The cognitive revolution that led to Homo sapiens' dominance was driven by storytelling.",
-    "image": "book-13.png",
-    "description": "Sapiens: A Brief History of Humankind by Yuval Noah Harari: A thought-provoking exploration of human history...",
-    "Author": "Yuval Noah Harari",
-    "Page Count": 443,
-    "Originally published": 2011,
-    "Estimated Reading Time": 10,
+    "title": "The Four Agreements",
+    "quote": "Be impeccable with your word. Don't take anything personally. Don't make assumptions. Always do your best.",
+    "image": "book-14.png",
+    "description": "The Four Agreements by Don Miguel Ruiz: A concise and powerful guide to personal freedom. Learn four transformative principles rooted in ancient wisdom that can bring happiness and authenticity to your life. Embrace these agreements to break free from limiting beliefs and create fulfilling relationships.",
+    "Author": "Don Miguel Ruiz",
+    "Page Count": 160,
+    "Originally published": 1997,
+    "Estimated Reading Time": 3,
     "club": "",
     "ideas": [
-      "Reflect on the history and evolution of the human species.",
-      "Explore the impact of storytelling and collective imagination on human progress.",
-      "Discuss the challenges and ethical implications of modern human society.",
-      "Consider the future of humanity and the potential for further evolution."
-    ],
-    "reviews": []
+      "Explore the power of personal agreements in transforming one's life.",
+      "Discuss the implications of being impeccable with your word.",
+      "Examine the impact of not taking things personally and avoiding assumptions.",
+      "Reflect on the value of always doing your best in all aspects of life."
+    ]
   },
   {
     "title": "The Power of Now",
     "quote": "Realize deeply that the present moment is all you ever have.",
-    "image": "book-14.png",
-    "description": "The Power of Now by Eckhart Tolle: A spiritual guide to living in the present moment and finding inner peace...",
+    "image": "book-15.png",
+    "description": "The Power of Now by Eckhart Tolle: A profound guide to spiritual awakening and living in the present moment. Tolle shares teachings and practices that help readers transcend past regrets and future worries, and find inner peace and fulfillment in the here and now. This transformative book offers practical wisdom for embracing the power of presence in our daily lives.",
     "Author": "Eckhart Tolle",
     "Page Count": 236,
     "Originally published": 1997,
@@ -248,14 +252,13 @@
       "Explore practical techniques for living in the present moment.",
       "Discuss the impact of ego and identification with thoughts on personal well-being.",
       "Consider the connection between spirituality and mental well-being."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Smartest Kids in the World",
     "quote": "Why do some nations excel while others fail? How do smart kids become great adults?",
-    "image": "book-15.png",
-    "description": "The Smartest Kids in the World by Amanda Ripley: A global exploration of education systems and student success...",
+    "image": "book-16.png",
+    "description": "The Smartest Kids in the World by Amanda Ripley: An exploration of education systems worldwide, following American teenagers studying abroad. Discover surprising insights into what makes some countries produce smarter students. A thought-provoking read on education and learning.",
     "Author": "Amanda Ripley",
     "Page Count": 320,
     "Originally published": 2013,
@@ -266,14 +269,13 @@
       "Explore the factors that contribute to student achievement and success.",
       "Discuss the role of teachers, parents, and policymakers in education.",
       "Consider potential reforms and innovations for improving education worldwide."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Creative Schools",
     "quote": "The real role of leadership in education is not and should not be command and control.",
-    "image": "book-16.png",
-    "description": "Creative Schools by Sir Ken Robinson and Lou Aronica: A call for transforming education through creativity and innovation...",
+    "image": "book-17.png",
+    "description": "Creative Schools by Sir Ken Robinson and Lou Aronica: A manifesto for transforming education and nurturing creativity in students. Challenge traditional beliefs about success and embrace a more holistic approach to education. Inspiring stories and practical ideas for fostering individuality and innovation.",
     "Author": "Sir Ken Robinson, Lou Aronica",
     "Page Count": 320,
     "Originally published": 2015,
@@ -284,14 +286,13 @@
       "Explore the challenges and opportunities for transforming traditional schooling.",
       "Discuss alternative models of education and learning environments.",
       "Consider the importance of fostering students' individual talents and passions."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Element",
     "quote": "The Element is the meeting point between natural aptitude and personal passion.",
-    "image": "book-17.png",
-    "description": "The Element: How Finding Your Passion Changes Everything by Sir Ken Robinson: A guide to discovering personal talents and passions...",
+    "image": "book-18.png",
+    "description": "The Element by Sir Ken Robinson: Discover your passion and purpose in life. Challenge conventional notions of success and find personal fulfillment by embracing your unique talents. Inspiring examples and anecdotes to unlock your potential.",
     "Author": "Sir Ken Robinson",
     "Page Count": 320,
     "Originally published": 2009,
@@ -302,14 +303,13 @@
       "Explore the concept of the element and its impact on personal fulfillment.",
       "Discuss the role of education in nurturing students' individual strengths and talents.",
       "Consider ways to create environments that foster creativity and personal growth."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Dumbing Us Down",
     "quote": "School is an artifice, a prison, and a twelve-year sentence.",
-    "image": "book-18.png",
-    "description": "Dumbing Us Down: The Hidden Curriculum of Compulsory Schooling by John Taylor Gatto: A critique of the modern education system...",
+    "image": "book-19.png",
+    "description": "Dumbing Us Down by John Taylor Gatto: A critique of the modern education system and its impact on students. Challenge standardization and conformity, advocating for an education that nurtures individuality and critical thinking. Thought-provoking insights for educational reform.",
     "Author": "John Taylor Gatto",
     "Page Count": 144,
     "Originally published": 1991,
@@ -320,32 +320,30 @@
       "Discuss the impact of standardized testing and conformity on students' development.",
       "Explore alternative approaches to education and learning.",
       "Consider the role of parents and communities in education."
-    ],
-    "reviews": []
+    ]
   },
   {
-    "title": "Invisible Learning",
+    "title": "Weapons of Mass Instruction",
     "quote": "We must encourage the sharing of knowledge beyond traditional education institutions.",
-    "image": "book-19.png",
-    "description": "Invisible Learning: Toward a New Ecology of Education by Cristóbal Cobo and John W. Moravec: A vision for a new paradigm of education...",
-    "Author": "Cristóbal Cobo, John W. Moravec",
-    "Page Count": 208,
-    "Originally published": 2011,
-    "Estimated Reading Time": 6,
+    "image": "book-20.png",
+    "description": "Weapons of Mass Instruction by John Taylor Gatto: In this book, Gatto explores the problems and shortcomings of the modern education system. He delves into the negative effects of standardized testing, the suppression of creativity, and the limitations of traditional schooling. Gatto offers alternative perspectives on learning and education, encouraging readers to question the status quo.",
+    "Author": "John Taylor Gatto",
+    "Page Count": 176,
+    "Originally published": 2009,
+    "Estimated Reading Time": 5,
     "club": "",
     "ideas": [
-      "Explore the concept of invisible learning and its implications for education.",
-      "Discuss the potential of technology and digital resources in expanding learning opportunities.",
-      "Reflect on the role of informal learning and self-directed education.",
-      "Consider the need for collaboration and knowledge-sharing beyond traditional institutions."
-    ],
-    "reviews": []
+      "Reflect on the shortcomings and limitations of the modern education system.",
+      "Discuss the impact of standardized testing on students and their creativity.",
+      "Explore alternative perspectives on learning and education.",
+      "Consider the role of critical thinking in questioning the status quo."
+    ]
   },
   {
     "title": "The Hidden Life of Trees",
     "quote": "Trees are social beings. They can count, learn, remember, and communicate.",
-    "image": "book-20.png",
-    "description": "The Hidden Life of Trees: What They Feel, How They Communicate—Discoveries from a Secret World by Peter Wohlleben: A fascinating exploration of the complex lives of trees...",
+    "image": "book-21.png",
+    "description": "The Hidden Life of Trees by Peter Wohlleben: Delve into the intriguing world of trees, uncovering their fascinating communication and survival strategies. Wohlleben's captivating insights reveal the interconnectedness and significance of these majestic organisms.",
     "Author": "Peter Wohlleben",
     "Page Count": 288,
     "Originally published": 2015,
@@ -356,14 +354,13 @@
       "Explore the symbiotic relationships and communication among trees and plants.",
       "Discuss the importance of forests and biodiversity for ecological balance.",
       "Consider the ethical implications of human interactions with nature."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Braiding Sweetgrass",
     "quote": "Indigenous wisdom teaches that land is alive and full of relatives.",
-    "image": "book-21.png",
-    "description": "Braiding Sweetgrass: Indigenous Wisdom, Scientific Knowledge, and the Teachings of Plants by Robin Wall Kimmerer: A blend of indigenous wisdom and scientific insights...",
+    "image": "book-22.png",
+    "description": "Braiding Sweetgrass by Robin Wall Kimmerer: Experience a poetic exploration of indigenous wisdom and scientific knowledge, intertwining the intricate connections between humans and the natural world. Kimmerer's heartfelt reflections inspire a deeper appreciation for nature's gifts.",
     "Author": "Robin Wall Kimmerer",
     "Page Count": 400,
     "Originally published": 2013,
@@ -374,14 +371,13 @@
       "Reflect on the reciprocal relationship between humans and the natural world.",
       "Discuss the importance of ecological restoration and sustainable practices.",
       "Consider the role of traditional ecological knowledge in modern conservation efforts."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "Silent Spring",
     "quote": "How could intelligent beings seek to control a few unwanted species by a method that contaminated the entire environment and brought the threat of disease and death even to their own kind?",
-    "image": "book-22.png",
-    "description": "Silent Spring by Rachel Carson: A groundbreaking exposé on the detrimental effects of pesticides and the need for environmental conservation...",
+    "image": "book-23.png",
+    "description": "Silent Spring by Rachel Carson: Expose the harmful impact of pesticides on the environment and human health. Carson's groundbreaking work ignited environmental consciousness, calling for the protection of our fragile ecosystems.",
     "Author": "Rachel Carson",
     "Page Count": 400,
     "Originally published": 1962,
@@ -392,14 +388,13 @@
       "Discuss the role of activism and public awareness in environmental conservation.",
       "Explore the interconnectedness of ecosystems and the importance of biodiversity.",
       "Consider the relevance of Silent Spring in the modern era of environmental challenges."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Sixth Extinction",
     "quote": "We are deciding, without quite meaning to, which evolutionary pathways will remain open and which will forever be closed.",
-    "image": "book-23.png",
-    "description": "The Sixth Extinction: An Unnatural History by Elizabeth Kolbert: A compelling investigation into the current mass extinction event...",
+    "image": "book-24.png",
+    "description": "The Sixth Extinction by Elizabeth Kolbert: Unearth the consequences of human-induced mass extinctions. Kolbert's compelling narrative highlights the urgent need for biodiversity conservation in the face of ongoing ecological crisis.",
     "Author": "Elizabeth Kolbert",
     "Page Count": 336,
     "Originally published": 2014,
@@ -410,14 +405,13 @@
       "Discuss the impact of human activities on global biodiversity.",
       "Explore the ethical implications of species extinction and conservation efforts.",
       "Consider the importance of environmental stewardship and sustainable practices."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Nature Fix",
     "quote": "Time in nature is not leisure time; it's an essential investment in our children's health.",
-    "image": "book-24.png",
-    "description": "The Nature Fix: Why Nature Makes Us Happier, Healthier, and More Creative by Florence Williams: A scientific exploration of the benefits of spending time in nature...",
+    "image": "book-25.png",
+    "description": "The Nature Fix by Florence Williams: Discover the transformative power of nature on our well-being. Williams explores the scientific evidence behind the positive effects of immersing ourselves in the natural world, advocating for a deeper connection with nature in our modern lives.",
     "Author": "Florence Williams",
     "Page Count": 304,
     "Originally published": 2017,
@@ -428,61 +422,91 @@
       "Discuss the concept of nature deficit and the importance of environmental experiences.",
       "Reflect on the role of nature in fostering creativity and mental health.",
       "Consider strategies for incorporating nature into daily life and urban environments."
-    ],
-    "reviews": []
+    ]
   },
   {
     "title": "The Book Thief",
-    "quote": "I have hated the words and I have loved them, and I hope I have made them right.",
-    "image": "book-27.png",
-    "description": "The Book Thief by Markus Zusak: A poignant and moving novel set during World War II...",
+    "quote": "Stealing stories and hearts.",
+    "image": "book-26.png",
+    "description": "The Book Thief by Markus Zusak: Set in Nazi Germany, this historical fiction novel follows the story of a young girl who finds solace in books during a time of war, highlighting the power of literature and the resilience of the human spirit.",
     "Author": "Markus Zusak",
-    "Page Count": 592,
+    "Page Count": 584,
     "Originally published": 2005,
-    "Estimated Reading Time": 14,
-    "club": "",
-    "ideas": [
-      "Reflect on the power of literature and storytelling in times of adversity.",
-      "Explore the impact of World War II on individuals and communities.",
-      "Discuss themes of courage, compassion, and the resilience of the human spirit.",
-      "Consider the role of books as a means of connection and preservation of memory."
-    ],
-    "reviews": []
-  },
-  {
-    "title": "The Diary of a Young Girl",
-    "quote": "I still believe, in spite of everything, that people are truly good at heart.",
-    "image": "book-28.png",
-    "description": "The Diary of a Young Girl by Anne Frank: The diary of a Jewish girl hiding from the Nazis during World War II...",
-    "Author": "Anne Frank",
-    "Page Count": 352,
-    "Originally published": 1947,
     "Estimated Reading Time": 10,
     "club": "",
     "ideas": [
-      "Reflect on the personal experiences of Anne Frank and the Holocaust.",
-      "Discuss the power of Anne Frank's diary as a historical and literary document.",
-      "Explore themes of hope, resilience, and the human capacity for kindness.",
-      "Consider the relevance of Anne Frank's story in contemporary society."
-    ],
-    "reviews": []
+      "Explore the transformative power of literature in times of adversity.",
+      "Discuss the portrayal of humanity's capacity for both good and evil.",
+      "Analyze the role of death as a narrator and its impact on the storytelling.",
+      "Consider the theme of loss and its effects on the characters' lives."
+    ]
+  },
+  {
+    "title": "The Prophet",
+    "quote": "Your joy is your sorrow unmasked.",
+    "image": "book-27.png",
+    "description": "The Prophet by Kahlil Gibran: A collection of poetic essays, this book offers profound insights into various aspects of life, spirituality, and human nature, offering guidance and reflections on love, joy, sorrow, and more.",
+    "Author": "Kahlil Gibran",
+    "Page Count": 96,
+    "Originally published": 1923,
+    "Estimated Reading Time": 2,
+    "club": "",
+    "ideas": [
+      "Reflect on the universal themes of love, joy, and sorrow.",
+      "Explore the role of spirituality and its influence on personal growth.",
+      "Discuss the importance of self-reflection and introspection.",
+      "Examine the timeless wisdom and philosophical teachings in the book."
+    ]
+  },
+  {
+    "title": "The Kite Runner",
+    "quote": "For you, a thousand times over.",
+    "image": "book-28.png",
+    "description": "The Kite Runner by Khaled Hosseini: Set in Afghanistan, this powerful novel delves into friendship, betrayal, and redemption against the backdrop of a changing society deeply influenced by cultural and historical events.",
+    "Author": "Khaled Hosseini",
+    "Page Count": 371,
+    "Originally published": 2003,
+    "Estimated Reading Time": 8,
+    "club": "",
+    "ideas": [
+      "Explore the complexities of friendship and loyalty.",
+      "Discuss the impact of cultural and historical events on individuals' lives.",
+      "Analyze the theme of redemption and its significance in the story.",
+      "Examine the portrayal of guilt and its consequences on the characters."
+    ]
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "quote": "It's enough for me to be sure that you and I exist at this moment.",
+    "image": "book-29.png",
+    "description": "One Hundred Years of Solitude by Gabriel Garcia Marquez: A landmark novel that tells the story of the Buendía family over the course of several generations in the fictional town of Macondo. Blending magical realism with historical events, the book explores themes of love, time, and the cyclical nature of human existence.",
+    "Author": "Gabriel Garcia Marquez",
+    "Page Count": 417,
+    "Originally published": 1967,
+    "Estimated Reading Time": 12,
+    "club": "",
+    "ideas": [
+      "Analyze the use of magical realism in the novel.",
+      "Discuss the themes of solitude, time, and memory.",
+      "Explore the significance of the Buendía family's history and lineage.",
+      "Examine the portrayal of Macondo as a microcosm of society."
+    ]
   },
   {
     "title": "The Immortal Life of Henrietta Lacks",
-    "quote": "No one asked if we wanted her cells, but they took them anyway.",
-    "image": "book-29.png",
-    "description": "The Immortal Life of Henrietta Lacks by Rebecca Skloot: The remarkable story of a woman whose cells revolutionized medical science...",
+    "quote": "Two decades later, cells from Henrietta Lacks still thrived in laboratories around the world, growing indefinitely and contributing to countless medical breakthroughs.",
+    "image": "book-30.png",
+    "description": "The Immortal Life of Henrietta Lacks by Rebecca Skloot: A non-fiction book that tells the story of Henrietta Lacks, an African-American woman whose cells were taken without her consent and became the basis for numerous scientific breakthroughs. The book explores ethical issues in medicine and raises questions about race, privacy, and consent.",
     "Author": "Rebecca Skloot",
-    "Page Count": 400,
+    "Page Count": 381,
     "Originally published": 2010,
-    "Estimated Reading Time": 9,
+    "Estimated Reading Time": 10,
     "club": "",
     "ideas": [
-      "Reflect on the ethical implications of medical research and informed consent.",
-      "Explore the intersection of race, class, and scientific progress.",
-      "Discuss the impact of Henrietta Lacks's cells on medical advancements.",
-      "Consider the importance of recognizing and honoring the contributions of marginalized individuals in science."
-    ],
-    "reviews": []
+      "Discuss the ethical implications of using Henrietta Lacks' cells without her knowledge or consent.",
+      "Examine the historical context of medical experimentation on marginalized communities.",
+      "Reflect on the impact of Henrietta Lacks' cells on scientific advancements.",
+      "Explore the intersection of race, class, and healthcare."
+    ]
   }
 ]
