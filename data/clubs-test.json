@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "The Reading Rebels",
+    "quote": "Until they become conscious they will never rebel, and until after they have rebelled they cannot become conscious.",
+    "image": "club-1",
+    "imagePage": "clubPage-1.jpg",
+    "description": "The Reading Rebels: A spirited book club challenging the status quo through literature. We explore unconventional reads, ignite conversations, and celebrate the power of independent thought. Join us on a rebellious reading journey!",
+    "manager": "",
+    "booksNumber": 5,
+    "Time": 4,
+    "books": [],
+    "benefits": [
+      "Intellectual exploration through unconventional reads.",
+      "Gain insight into political systems and ideologies.",
+      "Develop critical thinking skills through political analysis.",
+      "Community of independent thinkers."
+    ],
+    "reviews": []
+  },
+  {
+    "id": 2,
+    "name": "The Web Wizards",
+    "quote": "The best error message is the one that never shows up.",
+    "image": "club-2",
+    "imagePage": "clubPage-2.jpg",
+    "description": "The Web Wizards: A tech-savvy book club exploring the digital realm. We unravel the mysteries of technology, share insights, and dive into captivating tales of the digital age. Join our enchanting literary journey!",
+    "manager": "",
+    "booksNumber": 5,
+    "Time": 5,
+    "books": [],
+    "benefits": [
+      "Learn about emerging digital trends and advancements.",
+      "Enhance digital literacy skills and knowledge.",
+      "Discover insightful tech-related books and their impacts.",
+      "Connect with a community of knowledgeable tech enthusiasts."
+    ],
+    "reviews": []
+  },
+  {
+    "id": 3,
+    "name": "The Curious Bookworms",
+    "quote": "Those who have a 'why' to live, can bear with almost any 'how'.",
+    "image": "club-3",
+    "imagePage": "clubPage-3.jpg",
+    "description": "The Curious Bookworms: Explore life's wonders through captivating stories. Unravel mysteries, celebrate literature's transformative power. Join our curious journey of self-discovery and meaningful exploration!",
+    "manager": "",
+    "booksNumber": 5,
+    "Time": 3,
+    "books": [],
+    "benefits": [
+      "Explore life's complexities and possibilities, fostering personal growth.",
+      "Engage in reflective discussions for deeper self-understanding.",
+      "Discover wisdom and inspiration for a more fulfilling life.",
+      "Connect with a supportive community of fellow explorers on the journey of life."
+    ],
+    "reviews": []
+  },
+  { "id": 4, "name": "test club", "description": "test description" }
+]

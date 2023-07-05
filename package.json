@@ -2,7 +2,7 @@
   "name": "kitab-club",
   "version": "1.0.0",
   "description": "Kitab Club - a full-stack website",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "tailwindcss -i ./public/style.css -o ./public/css/main.css --watch"
   },
@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   }
 }
