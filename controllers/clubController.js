@@ -4,6 +4,16 @@ const clubs = JSON.parse(
   fs.readFileSync(`${__dirname}/../data/clubs-test.json`)
 );
 
+exports.checkId = (req, res, next, val) => {
+  if (+req.params.id > clubs.length) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid id',
+    });
+  }
+  next();
+};
+
 exports.getAllClubs = (req, res) => {
   res.status(200).json({
     status: 'success',
@@ -18,13 +28,6 @@ exports.getClub = (req, res) => {
   const id = +req.params.id;
 
   const club = clubs.find((el) => el.id === id);
-
-  if (!club) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Invalid id',
-    });
-  }
 
   res.status(200).json({
     status: 'success',
@@ -54,13 +57,6 @@ exports.createClub = (req, res) => {
 };
 
 exports.updateClub = (req, res) => {
-  if (+req.params.id > clubs.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Invalid id',
-    });
-  }
-
   res.status(200).json({
     status: 'success',
     data: {
@@ -70,13 +66,6 @@ exports.updateClub = (req, res) => {
 };
 
 exports.deleteClub = (req, res) => {
-  if (+req.params.id > clubs.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Invalid id',
-    });
-  }
-
   res.status(204).json({
     status: 'success',
     data: null,

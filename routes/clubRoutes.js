@@ -3,6 +3,8 @@ const clubController = require('./../controllers/clubController');
 
 const router = express.Router();
 
+router.param('id', clubController.checkId);
+
 router
   .route('/')
   .get(clubController.getAllClubs)
