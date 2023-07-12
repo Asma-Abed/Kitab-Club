@@ -1,73 +1,88 @@
-const fs = require('fs');
+const Club = require('./../models/clubModel');
 
-const clubs = JSON.parse(
-  fs.readFileSync(`${__dirname}/../data/clubs-test.json`)
-);
-
-exports.checkId = (req, res, next, val) => {
-  if (+req.params.id > clubs.length) {
-    return res.status(404).json({
+exports.getAllClubs = async (req, res) => {
+  try {
+    const clubs = await Club.find();
+    res.status(200).json({
+      status: 'success',
+      results: clubs.length,
+      data: {
+        clubs,
+      },
+    });
+  } catch (error) {
+    res.status(404).json({
       status: 'fail',
-      message: 'Invalid id',
+      message: error,
     });
   }
-  next();
 };
 
-exports.getAllClubs = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    results: clubs.length,
-    data: {
-      clubs,
-    },
-  });
+exports.getClub = async (req, res) => {
+  try {
+    const club = await Club.findById(req.params.id);
+    res.status(200).json({
+      status: 'success',
+      data: {
+        club,
+      },
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };
 
-exports.getClub = (req, res) => {
-  const id = +req.params.id;
-
-  const club = clubs.find((el) => el.id === id);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      club,
-    },
-  });
+exports.createClub = async (req, res) => {
+  try {
+    const newClub = await Club.create(req.body);
+    res.status(201).json({
+      status: 'success',
+      data: {
+        club: newClub,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };
 
-exports.createClub = (req, res) => {
-  const newId = clubs[clubs.length - 1].id + 1;
-  const newClub = Object.assign({ id: newId }, req.body);
-  clubs.push(newClub);
-
-  fs.writeFile(
-    `${__dirname}/data/clubs-test.json`,
-    JSON.stringify(clubs),
-    (err) => {
-      res.status(201).json({
-        status: 'success',
-        data: {
-          club: newClub,
-        },
-      });
-    }
-  );
+exports.updateClub = async (req, res) => {
+  try {
+    const club = await Club.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    res.status(200).json({
+      status: 'success',
+      data: {
+        club,
+      },
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };
 
-exports.updateClub = (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    data: {
-      club: 'Updated club here',
-    },
-  });
-};
-
-exports.deleteClub = (req, res) => {
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
+exports.deleteClub = async (req, res) => {
+  try {
+    await Club.findByIdAndDelete(req.params.id);
+    res.status(204).json({
+      status: 'success',
+      data: null,
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
 };

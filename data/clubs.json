@@ -7,7 +7,8 @@
     "description": "The Reading Rebels: A spirited book club challenging the status quo through literature. We explore unconventional reads, ignite conversations, and celebrate the power of independent thought. Join us on a rebellious reading journey!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 4,
+    "time": 4,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Intellectual exploration through unconventional reads.",
@@ -25,7 +26,8 @@
     "description": "The Web Wizards: A tech-savvy book club exploring the digital realm. We unravel the mysteries of technology, share insights, and dive into captivating tales of the digital age. Join our enchanting literary journey!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 5,
+    "time": 5,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Learn about emerging digital trends and advancements.",
@@ -43,7 +45,8 @@
     "description": "The Curious Bookworms: Explore life's wonders through captivating stories. Unravel mysteries, celebrate literature's transformative power. Join our curious journey of self-discovery and meaningful exploration!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 3,
+    "time": 3,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Explore life's complexities and possibilities, fostering personal growth.",
@@ -61,7 +64,8 @@
     "description": "Education Escapades: An insightful book club exploring the world of education systems. Dive into readings on their strengths, weaknesses, and innovative approaches. Join us for spirited discussions and expanding our educational perspectives!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 5,
+    "time": 5,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Gain insights into diverse education systems and their strengths and weaknesses.",
@@ -79,7 +83,8 @@
     "description": "The Nature Nook: A book club nestled in the beauty of nature. We delve into captivating reads that celebrate the natural world, fostering a deeper connection and appreciation for our environment. Join our nature-inspired literary journey!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 4,
+    "time": 4,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Deepen nature connection and knowledge through captivating reads.",
@@ -97,7 +102,8 @@
     "description": "Cultural Chronicles: A book club chronicling the diverse tapestry of cultures. Explore captivating stories, traditions, and histories, fostering cultural understanding and celebrating the richness of our global heritage. Join our cultural odyssey!",
     "manager": "",
     "booksNumber": 5,
-    "Time": 5,
+    "time": 5,
+    "rating": 5,
     "books": [],
     "benefits": [
       "Expand cultural knowledge through diverse narratives and discussions.",
