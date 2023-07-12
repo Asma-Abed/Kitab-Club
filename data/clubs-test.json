@@ -1,60 +1,96 @@
 [
   {
-    "id": 1,
     "name": "The Reading Rebels",
     "quote": "Until they become conscious they will never rebel, and until after they have rebelled they cannot become conscious.",
     "image": "club-1",
     "imagePage": "clubPage-1.jpg",
     "description": "The Reading Rebels: A spirited book club challenging the status quo through literature. We explore unconventional reads, ignite conversations, and celebrate the power of independent thought. Join us on a rebellious reading journey!",
-    "manager": "",
     "booksNumber": 5,
-    "Time": 4,
-    "books": [],
+    "time": 4,
     "benefits": [
       "Intellectual exploration through unconventional reads.",
       "Gain insight into political systems and ideologies.",
       "Develop critical thinking skills through political analysis.",
       "Community of independent thinkers."
-    ],
-    "reviews": []
+    ]
   },
   {
-    "id": 2,
     "name": "The Web Wizards",
     "quote": "The best error message is the one that never shows up.",
     "image": "club-2",
     "imagePage": "clubPage-2.jpg",
     "description": "The Web Wizards: A tech-savvy book club exploring the digital realm. We unravel the mysteries of technology, share insights, and dive into captivating tales of the digital age. Join our enchanting literary journey!",
-    "manager": "",
     "booksNumber": 5,
-    "Time": 5,
-    "books": [],
+    "time": 5,
     "benefits": [
       "Learn about emerging digital trends and advancements.",
       "Enhance digital literacy skills and knowledge.",
       "Discover insightful tech-related books and their impacts.",
       "Connect with a community of knowledgeable tech enthusiasts."
-    ],
-    "reviews": []
+    ]
   },
   {
-    "id": 3,
     "name": "The Curious Bookworms",
     "quote": "Those who have a 'why' to live, can bear with almost any 'how'.",
     "image": "club-3",
     "imagePage": "clubPage-3.jpg",
     "description": "The Curious Bookworms: Explore life's wonders through captivating stories. Unravel mysteries, celebrate literature's transformative power. Join our curious journey of self-discovery and meaningful exploration!",
-    "manager": "",
     "booksNumber": 5,
-    "Time": 3,
-    "books": [],
+    "time": 3,
+    "rating": 3,
     "benefits": [
       "Explore life's complexities and possibilities, fostering personal growth.",
       "Engage in reflective discussions for deeper self-understanding.",
       "Discover wisdom and inspiration for a more fulfilling life.",
       "Connect with a supportive community of fellow explorers on the journey of life."
-    ],
-    "reviews": []
+    ]
   },
-  { "id": 4, "name": "test club", "description": "test description" }
+  {
+    "name": "Education Escapades",
+    "quote": "The countries that out-educate us today will out-compete us tomorrow.",
+    "image": "club-4",
+    "imagePage": "clubPage-4.jpg",
+    "description": "Education Escapades: An insightful book club exploring the world of education systems. Dive into readings on their strengths, weaknesses, and innovative approaches. Join us for spirited discussions and expanding our educational perspectives!",
+    "booksNumber": 5,
+    "time": 5,
+    "rating": 5,
+    "benefits": [
+      "Gain insights into diverse education systems and their strengths and weaknesses.",
+      "Gain insight into political systems and ideologies.",
+      "Develop critical thinking skills through political analysis.",
+      "Community of independent thinkers."
+    ]
+  },
+  {
+    "name": "The Nature Nook",
+    "quote": "A tree can be only as strong as the forest that surrounds it.",
+    "image": "club-5",
+    "imagePage": "clubPage-5.jpg",
+    "description": "The Nature Nook: A book club nestled in the beauty of nature. We delve into captivating reads that celebrate the natural world, fostering a deeper connection and appreciation for our environment. Join our nature-inspired literary journey!",
+    "booksNumber": 5,
+    "time": 4,
+    "rating": 5,
+    "benefits": [
+      "Deepen nature connection and knowledge through captivating reads.",
+      "Gain ecological insights and foster environmental awareness.",
+      "Explore diverse perspectives on nature and conservation.",
+      "Join a community passionate about the natural world, fostering a sense of environmental stewardship."
+    ]
+  },
+  {
+    "name": "Cultural Chronicles",
+    "quote": "I am haunted by humans.",
+    "image": "club-6",
+    "imagePage": "clubPage-6.jpg",
+    "description": "Cultural Chronicles: A book club chronicling the diverse tapestry of cultures. Explore captivating stories, traditions, and histories, fostering cultural understanding and celebrating the richness of our global heritage. Join our cultural odyssey!",
+    "booksNumber": 5,
+    "time": 5,
+    "rating": 5,
+    "benefits": [
+      "Expand cultural knowledge through diverse narratives and discussions.",
+      "Foster cross-cultural understanding and appreciation.",
+      "Explore the richness and diversity of global heritage.",
+      "Engage in meaningful conversations that promote cultural empathy and respect."
+    ]
+  }
 ]
