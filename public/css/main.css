@@ -628,6 +628,14 @@ video {
   margin-top: 2rem;
 }
 
+.mt-56 {
+  margin-top: 14rem;
+}
+
+.mt-48 {
+  margin-top: 12rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -674,6 +682,10 @@ video {
 
 .h-hl {
   height: 500px;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .w-1\/2 {
@@ -746,6 +758,18 @@ video {
 
 .w-w2 {
   width: 256px;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-screen-xl {
@@ -823,6 +847,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .overflow-hidden {
