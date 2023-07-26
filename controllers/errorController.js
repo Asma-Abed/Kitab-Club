@@ -4,6 +4,13 @@ const handleCastErr = (err) => {
   return new AppError(`Invalid ${err.path}: ${err.value}`, 400);
 };
 
+const handleDuplicatedFields = (err) => {
+  return new AppError(
+    `This is a duplicate field value ${err.keyValue.name}. Please use another value!`,
+    400,
+  );
+};
+
 const sendErrDev = (err, res) => {
   res.status(err.statusCode).json({
     status: err.status,
@@ -39,6 +46,7 @@ module.exports = (err, req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
     if (err.name === 'CastError') error = handleCastErr(error);
+    if (err.code === 11000) error = handleDuplicatedFields(error);
     sendErrProd(error, res);
   }
 };
