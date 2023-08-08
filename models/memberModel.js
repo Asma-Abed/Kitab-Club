@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const bcrypt = require('bcryptjs');
 
 const memberSchema = new mongoose.Schema({
   name: {
@@ -24,6 +25,7 @@ const memberSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, 'Please provide a password!'],
+    minlength: 8,
   },
   confirmPassword: {
     type: String,
@@ -35,6 +37,13 @@ const memberSchema = new mongoose.Schema({
       message: 'Passwords do not match!',
     },
   },
+});
+
+memberSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next();
+  this.password = await bcrypt.hash(this.password, 12);
+  this.confirmPassword = undefined;
+  next();
 });
 
 const Member = mongoose.model('Member', memberSchema);
