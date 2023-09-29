@@ -1,8 +1,16 @@
-exports.getAllMembers = (req, res) => {
+const Member = require('../models/memberModel');
+const catchAsync = require('../utils/catchAsync');
+
+exports.getAllMembers = catchAsync(async (req, res, next) => {
+  const members = await Member.find();
   res.status(200).json({
-    message: 'Not defined yet!',
+    status: 'success',
+    results: members.length,
+    data: {
+      members,
+    },
   });
-};
+});
 exports.getMember = (req, res) => {
   res.status(200).json({
     message: 'Not defined yet!',

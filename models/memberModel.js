@@ -26,6 +26,7 @@ const memberSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provide a password!'],
     minlength: 8,
+    select: false,
   },
   confirmPassword: {
     type: String,
@@ -45,6 +46,13 @@ memberSchema.pre('save', async function (next) {
   this.confirmPassword = undefined;
   next();
 });
+
+memberSchema.methods.comparePassword = async function (
+  enteredPassword,
+  memberPassword,
+) {
+  return await bcrypt.compare(enteredPassword, memberPassword);
+};
 
 const Member = mongoose.model('Member', memberSchema);
 module.exports = Member;
