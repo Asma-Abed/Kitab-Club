@@ -1,11 +1,12 @@
 const express = require('express');
 const clubController = require('./../controllers/clubController');
+const authController = require('./../controllers/authController');
 
 const router = express.Router();
 
 router
   .route('/')
-  .get(clubController.getAllClubs)
+  .get(authController.protect, clubController.getAllClubs)
   .post(clubController.createClub);
 
 router

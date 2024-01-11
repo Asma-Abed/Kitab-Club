@@ -1,3 +1,4 @@
+const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const Member = require('../models/memberModel');
 const catchAsync = require('../utils/catchAsync');
@@ -15,6 +16,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     confirmPassword: req.body.confirmPassword,
+    passwordChangedAt: req.body.passwordChangedAt,
   });
 
   const token = signToken(newMember._id);
@@ -32,9 +34,7 @@ exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return next(
-      new AppError('Please provide your email and your passowrd!', 400),
-    );
+    return next(new AppError('Please provide your email and passowrd!', 400));
   }
 
   const member = await Member.findOne({ email }).select('+password');
@@ -49,4 +49,38 @@ exports.login = catchAsync(async (req, res, next) => {
     status: 'success',
     token,
   });
+});
+
+exports.protect = catchAsync(async (req, res, next) => {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    token = req.headers.authorization.split(' ')[1];
+  }
+
+  if (!token) {
+    return next(
+      new AppError('You are not logged in! Please log in to get access.', 401),
+    );
+  }
+
+  const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
+
+  const currenMember = await Member.findById(decoded.id);
+
+  if (!currenMember) {
+    return next(
+      new AppError('The member belonging to this token no longer exist!', 401),
+    );
+  }
+
+  if (currenMember.changedPasswordTime(decoded.iat)) {
+    return next(
+      new AppError('Password was recently changed! Please log in again.', 401),
+    );
+  }
+  req.member = currenMember;
+  next();
 });

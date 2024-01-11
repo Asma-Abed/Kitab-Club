@@ -16,6 +16,12 @@ const handleValidationErr = (err) => {
   return new AppError(`Invalid input data! ${errors.join(', ')}`, 400);
 };
 
+const handleJwtError = () =>
+  new AppError('Invalid token! Please log in again.', 401);
+
+const handleJwtExpired = () =>
+  new AppError('Token has expired! Please log in again.', 401);
+
 const sendErrDev = (err, res) => {
   res.status(err.statusCode).json({
     status: err.status,
@@ -53,6 +59,8 @@ module.exports = (err, req, res, next) => {
     if (err.name === 'CastError') error = handleCastErr(error);
     if (err.code === 11000) error = handleDuplicatedFields(error);
     if (err.name === 'ValidationError') error = handleValidationErr(error);
+    if (err.name === 'JsonWebTokenError') error = handleJwtError();
+    if (err.name === 'TokenExpiredError') error = handleJwtExpired();
     sendErrProd(error, res);
   }
 };
