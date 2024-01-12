@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
@@ -38,12 +39,14 @@ const memberSchema = new mongoose.Schema({
       message: 'Passwords do not match!',
     },
   },
-  passwordChangedAt: Date,
   role: {
     type: String,
     enum: ['member', 'manager', 'admin'],
     default: 'member',
   },
+  passwordChangedAt: Date,
+  passwordResetToken: String,
+  passwordResetExpires: Date,
 });
 
 memberSchema.pre('save', async function (next) {
@@ -69,6 +72,21 @@ memberSchema.methods.changedPasswordTime = function (JWTTimestamp) {
     return JWTTimestamp < changedTimestamp;
   }
   return false;
+};
+
+memberSchema.methods.createPasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString('hex');
+
+  this.passwordResetToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+
+  console.log({ resetToken }, this.passwordResetToken);
+
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000;
+
+  return resetToken;
 };
 
 const Member = mongoose.model('Member', memberSchema);
