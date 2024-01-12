@@ -12,7 +12,15 @@ router
 router
   .route('/:id')
   .get(clubController.getClub)
-  .patch(clubController.updateClub)
-  .delete(clubController.deleteClub);
+  .patch(
+    authController.protect,
+    authController.restrictTo('manager', 'admin'),
+    clubController.updateClub,
+  )
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin'),
+    clubController.deleteClub,
+  );
 
 module.exports = router;
