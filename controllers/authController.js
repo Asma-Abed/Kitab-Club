@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const Member = require('../models/memberModel');
@@ -129,6 +130,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     });
   } catch (err) {
     console.log(err);
+
     member.passwordResetToken = undefined;
     member.passwordResetExpires = undefined;
 
@@ -143,4 +145,31 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   }
 });
 
-exports.resetPassword = catchAsync(async (req, res, next) => {});
+exports.resetPassword = catchAsync(async (req, res, next) => {
+  const hashedToken = crypto
+    .createHash('sha256')
+    .update(req.params.token)
+    .digest('hex');
+
+  const member = await Member.findOne({
+    passwordResetToken: hashedToken,
+    passwordResetExpires: { $gt: Date.now() },
+  });
+
+  if (!member) {
+    return next(new AppError('Token is invalid or has expired!', 400));
+  }
+
+  member.password = req.body.password;
+  member.confirmPassword = req.body.confirmPassword;
+  member.passwordResetToken = undefined;
+  member.passwordResetExpires = undefined;
+
+  await member.save();
+
+  const token = signToken(member._id);
+  res.status(200).json({
+    status: 'success',
+    token,
+  });
+});
