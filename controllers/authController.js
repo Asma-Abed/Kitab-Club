@@ -12,6 +12,17 @@ const signToken = (id) => {
   });
 };
 
+const createAndSendToken = (member, statusCode, res) => {
+  const token = signToken(member._id);
+  res.status(statusCode).json({
+    status: 'success',
+    token,
+    data: {
+      member,
+    },
+  });
+};
+
 exports.signup = catchAsync(async (req, res, next) => {
   const newMember = await Member.create({
     name: req.body.name,
@@ -22,15 +33,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     role: req.body.role,
   });
 
-  const token = signToken(newMember._id);
-
-  res.status(201).json({
-    status: 'success',
-    token,
-    data: {
-      newMember,
-    },
-  });
+  createAndSendToken(newMember, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -46,12 +49,7 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError('Incorrect email or password!', 401));
   }
 
-  const token = signToken(member._id);
-
-  res.status(200).json({
-    status: 'success',
-    token,
-  });
+  createAndSendToken(member, 200, res);
 });
 
 exports.protect = catchAsync(async (req, res, next) => {
@@ -167,9 +165,5 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
 
   await member.save();
 
-  const token = signToken(member._id);
-  res.status(200).json({
-    status: 'success',
-    token,
-  });
+  createAndSendToken(member, 200, res);
 });
