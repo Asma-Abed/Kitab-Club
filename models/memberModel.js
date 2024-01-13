@@ -56,6 +56,12 @@ memberSchema.pre('save', async function (next) {
   next();
 });
 
+memberSchema.pre('save', function (next) {
+  if (!this.isModified('password') || this.isNew) return next();
+  this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
 memberSchema.methods.comparePassword = async function (
   enteredPassword,
   memberPassword,
