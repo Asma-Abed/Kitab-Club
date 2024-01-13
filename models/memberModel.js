@@ -47,6 +47,7 @@ const memberSchema = new mongoose.Schema({
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
+  active: { type: Boolean, default: true, select: false },
 });
 
 memberSchema.pre('save', async function (next) {
@@ -59,6 +60,11 @@ memberSchema.pre('save', async function (next) {
 memberSchema.pre('save', function (next) {
   if (!this.isModified('password') || this.isNew) return next();
   this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
+memberSchema.pre(/^find/, function (next) {
+  this.find({ active: { $ne: false } });
   next();
 });
 

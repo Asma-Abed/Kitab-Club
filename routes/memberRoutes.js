@@ -22,6 +22,12 @@ router.patch(
   memberController.updateMyProfile,
 );
 
+router.delete(
+  '/deleteMyProfile',
+  authController.protect,
+  memberController.deleteMyProfile,
+);
+
 router
   .route('/')
   .get(memberController.getAllMembers)

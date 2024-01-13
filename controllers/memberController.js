@@ -46,6 +46,14 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.deleteMyProfile = catchAsync(async (req, res, next) => {
+  await Member.findByIdAndUpdate(req.member.id, { active: false });
+  res.status(204).json({
+    status: 'success',
+    data: null,
+  });
+});
+
 exports.getMember = (req, res) => {
   res.status(200).json({
     message: 'Not defined yet!',
