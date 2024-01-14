@@ -45,6 +45,18 @@ const clubSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  manager: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Member',
+  },
+});
+
+clubSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'manager',
+    select: '-__v -passwordChangedAt',
+  });
+  next();
 });
 
 const Club = mongoose.model('Club', clubSchema);
