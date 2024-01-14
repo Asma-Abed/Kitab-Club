@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
 
 const clubRouter = require('./routes/clubRoutes');
 const bookRouter = require('./routes/bookRoutes');
@@ -9,8 +10,10 @@ const AppError = require('./utils/appError');
 const globalErroHandler = require('./controllers/errorController');
 const app = express();
 
+app.use(helmet());
+
 app.use(morgan('dev'));
-app.use(express.json());
+app.use(express.json({ limit: '10kb' }));
 
 const limiter = rateLimit({
   max: 100,
