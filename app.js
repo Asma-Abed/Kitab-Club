@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const clubRouter = require('./routes/clubRoutes');
 const bookRouter = require('./routes/bookRoutes');
 const memberRouter = require('./routes/memberRoutes');
+const reviewRouter = require('./routes/reviewRoutes');
 const AppError = require('./utils/appError');
 const globalErroHandler = require('./controllers/errorController');
 const app = express();
@@ -31,6 +32,7 @@ app.use('/api', limiter);
 app.use('/api/v1/clubs', clubRouter);
 app.use('/api/v1/books', bookRouter);
 app.use('/api/v1/members', memberRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`));
