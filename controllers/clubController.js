@@ -14,7 +14,7 @@ exports.getAllClubs = catchAsync(async (req, res, next) => {
 });
 
 exports.getClub = catchAsync(async (req, res, next) => {
-  const club = await Club.findById(req.params.id);
+  const club = await Club.findById(req.params.id).populate('reviews');
 
   if (!club) {
     return next(new AppError('No club found for this ID', 404));
