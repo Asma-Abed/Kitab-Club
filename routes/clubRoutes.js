@@ -2,7 +2,11 @@ const express = require('express');
 const clubController = require('./../controllers/clubController');
 const authController = require('./../controllers/authController');
 
+const reviewRouter = require('./reviewRoutes');
+
 const router = express.Router();
+
+router.use('/:clubId/reviews', reviewRouter);
 
 router
   .route('/')
