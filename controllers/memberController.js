@@ -1,6 +1,7 @@
 const Member = require('../models/memberModel');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
+const handler = require('./handlerController');
 
 const filterObject = (obj, ...fields) => {
   const newObject = {};
@@ -9,17 +10,6 @@ const filterObject = (obj, ...fields) => {
   });
   return newObject;
 };
-
-exports.getAllMembers = catchAsync(async (req, res, next) => {
-  const members = await Member.find();
-  res.status(200).json({
-    status: 'success',
-    results: members.length,
-    data: {
-      members,
-    },
-  });
-});
 
 exports.updateMyProfile = catchAsync(async (req, res, next) => {
   if (req.body.password || req.body.confirmPassword) {
@@ -54,23 +44,12 @@ exports.deleteMyProfile = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getMember = (req, res) => {
-  res.status(200).json({
-    message: 'Not defined yet!',
-  });
-};
-exports.createMember = (req, res) => {
-  res.status(200).json({
-    message: 'Not defined yet!',
-  });
-};
-exports.updateMember = (req, res) => {
-  res.status(200).json({
-    message: 'Not defined yet!',
-  });
-};
-exports.deleteMember = (req, res) => {
-  res.status(200).json({
-    message: 'Not defined yet!',
-  });
-};
+exports.getAllMembers = handler.getAll(Member);
+
+exports.getMember = handler.getDoc(Member, 'member');
+
+exports.createMember = handler.createDoc(Member);
+
+exports.updateMember = handler.updateDoc(Member, 'member');
+
+exports.deleteMember = handler.deleteDoc(Member, 'member');

@@ -21,10 +21,6 @@ router
     authController.restrictTo('manager', 'admin'),
     clubController.updateClub,
   )
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    clubController.deleteClub,
-  );
+  .delete(authController.protect, clubController.deleteClub);
 
 module.exports = router;

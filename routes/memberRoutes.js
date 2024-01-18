@@ -31,12 +31,24 @@ router.delete(
 router
   .route('/')
   .get(memberController.getAllMembers)
-  .post(memberController.createMember);
+  .post(
+    authController.protect,
+    authController.restrictTo('admin'),
+    memberController.createMember,
+  );
 
 router
   .route('/:id')
   .get(memberController.getMember)
-  .patch(memberController.updateMember)
-  .delete(memberController.deleteMember);
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    memberController.updateMember,
+  )
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin'),
+    memberController.deleteMember,
+  );
 
 module.exports = router;
