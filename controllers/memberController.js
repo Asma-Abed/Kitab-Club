@@ -1,5 +1,5 @@
 const Member = require('../models/memberModel');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const catchAsync = require('../utils/catchAsync');
 const handler = require('./handlerController');
 
@@ -9,6 +9,11 @@ const filterObject = (obj, ...fields) => {
     if (fields.includes(el)) newObject[el] = obj[el];
   });
   return newObject;
+};
+
+exports.getMyProfile = (req, res, next) => {
+  req.params.id = req.member.id;
+  next();
 };
 
 exports.updateMyProfile = catchAsync(async (req, res, next) => {

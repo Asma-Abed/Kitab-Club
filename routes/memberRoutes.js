@@ -10,45 +10,29 @@ router.post('/login', authController.login);
 router.post('/forgotPassword', authController.forgotPassword);
 router.patch('/resetPassword/:token', authController.resetPassword);
 
-router.patch(
-  '/updateMyPassword',
-  authController.protect,
-  authController.updatePassword,
+router.use(authController.protect);
+
+router.get(
+  '/getMyProfile',
+  memberController.getMyProfile,
+  memberController.getMember,
 );
 
-router.patch(
-  '/updateMyProfile',
-  authController.protect,
-  memberController.updateMyProfile,
-);
+router.patch('/updateMyPassword', authController.updatePassword);
 
-router.delete(
-  '/deleteMyProfile',
-  authController.protect,
-  memberController.deleteMyProfile,
-);
+router.patch('/updateMyProfile', memberController.updateMyProfile);
+
+router.delete('/deleteMyProfile', memberController.deleteMyProfile);
 
 router
   .route('/')
   .get(memberController.getAllMembers)
-  .post(
-    authController.protect,
-    authController.restrictTo('admin'),
-    memberController.createMember,
-  );
+  .post(authController.restrictTo('admin'), memberController.createMember);
 
 router
   .route('/:id')
   .get(memberController.getMember)
-  .patch(
-    authController.protect,
-    authController.restrictTo('admin'),
-    memberController.updateMember,
-  )
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    memberController.deleteMember,
-  );
+  .patch(authController.restrictTo('admin'), memberController.updateMember)
+  .delete(authController.restrictTo('admin'), memberController.deleteMember);
 
 module.exports = router;

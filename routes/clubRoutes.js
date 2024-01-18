@@ -10,8 +10,12 @@ router.use('/:clubId/reviews', reviewRouter);
 
 router
   .route('/')
-  .get(authController.protect, clubController.getAllClubs)
-  .post(clubController.createClub);
+  .get(clubController.getAllClubs)
+  .post(
+    authController.protect,
+    authController.restrictTo('admin', 'manager'),
+    clubController.createClub,
+  );
 
 router
   .route('/:id')
@@ -21,6 +25,10 @@ router
     authController.restrictTo('manager', 'admin'),
     clubController.updateClub,
   )
-  .delete(authController.protect, clubController.deleteClub);
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin', 'manager'),
+    clubController.deleteClub,
+  );
 
 module.exports = router;
