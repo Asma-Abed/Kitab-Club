@@ -50,6 +50,7 @@ const clubSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: 'Member',
     },
+    books: [{ type: mongoose.Schema.ObjectId, ref: 'Book' }],
   },
   {
     toJSON: { virtuals: true },

@@ -3,7 +3,10 @@ const handler = require('./handlerController');
 
 exports.getAllBooks = handler.getAll(Book);
 
-exports.getBook = handler.getDoc(Book, 'book');
+exports.getBook = handler.getDoc(Book, 'book', {
+  path: 'club',
+  select: 'name image',
+});
 
 exports.createBook = handler.createDoc(Book);
 

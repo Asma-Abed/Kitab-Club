@@ -44,6 +44,10 @@ const bookSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  club: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Club',
+  },
 });
 
 const Book = mongoose.model('Book', bookSchema);

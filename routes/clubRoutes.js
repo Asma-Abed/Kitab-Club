@@ -22,7 +22,7 @@ router
   .get(clubController.getClub)
   .patch(
     authController.protect,
-    authController.restrictTo('manager', 'admin'),
+    authController.restrictTo('admin', 'manager'),
     clubController.updateClub,
   )
   .delete(
