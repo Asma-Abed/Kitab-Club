@@ -17,10 +17,6 @@ const memberSchema = new mongoose.Schema({
     validate: [validator.isEmail, 'Please provide a valid email!'],
   },
   job: String,
-  manager: {
-    type: Boolean,
-    default: false,
-  },
   bio: String,
   social: [String],
   password: {
@@ -44,6 +40,7 @@ const memberSchema = new mongoose.Schema({
     enum: ['member', 'manager', 'admin'],
     default: 'member',
   },
+  clubs: [{ type: mongoose.Schema.ObjectId, ref: 'Club' }],
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,

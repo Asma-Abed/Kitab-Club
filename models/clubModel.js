@@ -64,13 +64,13 @@ clubSchema.virtual('reviews', {
   localField: '_id',
 });
 
-clubSchema.pre(/^find/, function (next) {
-  this.populate({
-    path: 'manager',
-    select: '-__v -passwordChangedAt',
-  });
-  next();
-});
+// clubSchema.pre(/^find/, function (next) {
+//   this.populate({
+//     path: 'manager',
+//     select: 'name photo',
+//   });
+//   next();
+// });
 
 const Club = mongoose.model('Club', clubSchema);
 

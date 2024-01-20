@@ -4,8 +4,8 @@ const handler = require('./handlerController');
 exports.getAllClubs = handler.getAll(Club);
 
 exports.getClub = handler.getDoc(Club, 'club', {
-  path: 'reviews books',
-  select: 'title review rating',
+  path: 'manager reviews books',
+  select: 'name photo title review rating',
 });
 
 exports.createClub = handler.createDoc(Club);

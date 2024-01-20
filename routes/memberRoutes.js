@@ -27,7 +27,7 @@ router.delete('/deleteMyProfile', memberController.deleteMyProfile);
 router
   .route('/')
   .get(memberController.getAllMembers)
-  .post(authController.restrictTo('admin'), memberController.createMember);
+  .post(memberController.createMember);
 
 router
   .route('/:id')

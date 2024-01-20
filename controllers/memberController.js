@@ -51,7 +51,10 @@ exports.deleteMyProfile = catchAsync(async (req, res, next) => {
 
 exports.getAllMembers = handler.getAll(Member);
 
-exports.getMember = handler.getDoc(Member, 'member');
+exports.getMember = handler.getDoc(Member, 'member', {
+  path: 'clubs',
+  select: 'name image',
+});
 
 exports.createMember = handler.createDoc(Member);
 
