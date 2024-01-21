@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -12,6 +13,9 @@ const reviewRouter = require('./routes/reviewRoutes');
 const AppError = require('./utils/appError');
 const globalErroHandler = require('./controllers/errorController');
 const app = express();
+
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(helmet());
 
@@ -28,6 +32,10 @@ const limiter = rateLimit({
 });
 
 app.use('/api', limiter);
+
+app.get('/', (req, res) => {
+  res.status(200).render('base');
+});
 
 app.use('/api/v1/clubs', clubRouter);
 app.use('/api/v1/books', bookRouter);
