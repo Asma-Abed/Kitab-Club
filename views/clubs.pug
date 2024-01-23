@@ -1,4 +1,13 @@
 extends base
 
 block content 
-  h1 All clubs
+  main
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 Our Clubs 
+      .flex.gap-40.justify-center.mb-14.flex-wrap
+        each club in clubs
+          .w-72.h-96.border-colorPrimary.border-2.rounded.text-center.relative
+            img(src=`img/clubs/${club.image}` alt='')
+            a.px-3.w-56.bg-colorSecondary.text-white.rounded.absolute.top-80(class='py-1.5 right-1/2 translate-x-1/2' href='#') #{club.name}
+         
+          
