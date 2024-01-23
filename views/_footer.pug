@@ -1,0 +1,24 @@
+footer.max-w-screen-xl.mx-auto.mb-12.mt-36
+  .flex.justify-between.items-center
+    div
+      img.w-16.cursor-pointer(src='img/logo-color.png' alt='')
+    div
+      p
+        | &copy; Developed by 
+        a.text-colorPrimary.underline(href='https://github.com/Asma-Abed') Asma Abed
+        | .
+    .flex.flex-col.gap-4
+      ul.flex.gap-4
+        li: a(href="#") About us
+        li:  a(href="#") Download app
+        li:  a(href="#") Contact us
+      .flex.gap-4
+        a(href='#')
+          svg.w-5.h-5.inline-block.fill-colorSecondary.mr-2
+            use(xlink:href='img/sprite.svg#icon-facebook2')
+        a(href='#')
+          svg.w-5.h-5.inline-block.fill-colorSecondary.mr-2
+            use(xlink:href='img/sprite.svg#icon-instagram')
+        a(href='#')
+          svg.w-5.h-5.inline-block.fill-colorSecondary.mr-2
+            use(xlink:href='img/sprite.svg#icon-twitter')

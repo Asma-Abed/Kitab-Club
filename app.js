@@ -10,7 +10,9 @@ const clubRouter = require('./routes/clubRoutes');
 const bookRouter = require('./routes/bookRoutes');
 const memberRouter = require('./routes/memberRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
-const AppError = require('./utils/appError');
+const viewRouter = require('./routes/viewRoutes');
+
+const AppError = require('./utils/AppError');
 const globalErroHandler = require('./controllers/errorController');
 const app = express();
 
@@ -35,10 +37,7 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 
-app.get('/', (req, res) => {
-  res.status(200).render('base');
-});
-
+app.use('/', viewRouter);
 app.use('/api/v1/clubs', clubRouter);
 app.use('/api/v1/books', bookRouter);
 app.use('/api/v1/members', memberRouter);
