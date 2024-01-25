@@ -1,4 +1,58 @@
 extends base 
 
+include _review
+
 block content 
-  h1 Club page
+  main
+    section.max-w-screen-xl.mx-auto.mb-28
+      .mx-24.flex.justify-between
+        .flex-col.flex.justify-between
+          h1.text-2xl.text-colorPrimary.font-semibold #{club.name}
+          q.text-3xl.mt-8.w-w #{club.quote}
+          a.w-36.px-3.bg-colorPrimary.rounded.mb-8.font-semibold.text-center(class='py-1.5' href='#') Join Now
+        .w-w.h-h
+          img(src=`/img/clubs/${club.imagePage}` alt='')
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-28 About this club
+      .mx-24.flex.gap-64.text-xl
+        .w-w
+          p= club.description
+        ul.flex.flex-col.gap-4
+          li
+            strong Club Manager:&nbsp; 
+            | #{club.manager.name}
+          li
+            strong Number of Books:&nbsp; 
+            | #{club.booksNumber}
+          li
+            strong Estimated Time:&nbsp; 
+            | #{club.time} months
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 Books Included
+      .flex.gap-36.justify-center.mb-14.flex-wrap
+        each book in club.books
+          .w-64.h-96.border-colorPrimary.border-2.rounded.text-center.flex.flex-col.items-center
+            .my-6.text-xl
+              h4= book.title
+              p= book.author
+            .w-32.mb-8
+              img(src=`/img/books/${book.image}` alt=`${book.title}`)
+            a.px-3.w-56.bg-colorSecondary.text-white.rounded(class='py-1.5' href='#') See Book Details
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 What you&apos;ll learn
+      ul.px-28.flex.flex-col.gap-6.text-xl
+        each benefit in club.benefits
+          li
+            svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+              use(xlink:href='/img/sprite.svg#icon-check')
+            span= benefit
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 Members reviews
+      .flex.items-center.gap-20.mx-24
+        each review in club.reviews.slice(0,3)
+          +review(review)
+                

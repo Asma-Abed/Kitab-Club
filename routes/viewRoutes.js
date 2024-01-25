@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get('/', viewsController.getHome);
 router.get('/clubs', viewsController.getClubs);
-router.get('/club', viewsController.getClub);
+router.get('/clubs/:slug', viewsController.getClub);
 
 module.exports = router;

@@ -34,7 +34,7 @@ reviewSchema.index({ club: 1, member: 1 }, { unique: true });
 reviewSchema.pre(/^find/, function (next) {
   this.populate({
     path: 'member',
-    select: 'name photo',
+    select: 'name photo job',
   });
   next();
 });

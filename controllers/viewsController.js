@@ -13,8 +13,14 @@ exports.getClubs = catchAsync(async (req, res) => {
   });
 });
 
-exports.getClub = (req, res) => {
-  res.status(200).render('club', {
-    title: 'Club Page',
+exports.getClub = catchAsync(async (req, res, next) => {
+  const club = await Club.findOne({ slug: req.params.slug }).populate({
+    path: 'manager reviews books',
+    fields: 'name photo title review rating',
   });
-};
+
+  res.status(200).render('club', {
+    title: club.name,
+    club,
+  });
+});

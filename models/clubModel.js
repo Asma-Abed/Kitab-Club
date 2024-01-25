@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const clubSchema = new mongoose.Schema(
   {
@@ -7,6 +8,7 @@ const clubSchema = new mongoose.Schema(
       required: [true, 'Clubs must have a name!'],
       unique: true,
     },
+    slug: String,
     quote: {
       type: String,
       required: [true, 'Clubs must have a quote!'],
@@ -61,10 +63,17 @@ const clubSchema = new mongoose.Schema(
   },
 );
 
+clubSchema.index({ slug: 1 });
+
 clubSchema.virtual('reviews', {
   ref: 'Review',
   foreignField: 'club',
   localField: '_id',
+});
+
+clubSchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 // clubSchema.pre(/^find/, function (next) {

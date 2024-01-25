@@ -1,0 +1,12 @@
+mixin review(review)
+  .text-center.flex.flex-col.gap-3
+    div
+      img.inline-block.w-36.rounded-full(src=`/img/members/${review.member.photo}` alt='')
+    div
+      p= review.member.name
+      p= review.member.job
+    q= review.review
+    div
+      each star in [1,2,3,4,5]
+        svg.w-6.h-6.inline-block(class=`fill-${review.rating >= star ? 'colorPrimary' : 'gray-300'}`)
+          use(xlink:href='/img/sprite.svg#icon-star-empty')
