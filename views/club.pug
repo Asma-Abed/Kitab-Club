@@ -39,7 +39,7 @@ block content
               p= book.author
             .w-32.mb-8
               img(src=`/img/books/${book.image}` alt=`${book.title}`)
-            a.px-3.w-56.bg-colorSecondary.text-white.rounded(class='py-1.5' href='#') See Book Details
+            a.px-3.w-56.bg-colorSecondary.text-white.rounded(class='py-1.5' href=`/books/${book.slug}`) See Book Details
 
     section.max-w-screen-xl.mx-auto.mb-28
       h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 What you&apos;ll learn

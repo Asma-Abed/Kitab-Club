@@ -1,0 +1,15 @@
+extends base
+
+block content 
+  main
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14 All books
+      .flex.gap-36.justify-center.mb-14.flex-wrap
+        each book in books
+          .w-64.h-96.border-colorPrimary.border-2.rounded.text-center.flex.flex-col.items-center
+            .my-6.text-xl
+              h4= book.title
+              p= book.author
+            .w-32.mb-8
+              img(src=`/img/books/${book.image}` alt=`${book.title}`)
+            a.px-3.w-56.bg-colorSecondary.text-white.rounded(class='py-1.5' href=`/books/${book.slug}`) See Book Details

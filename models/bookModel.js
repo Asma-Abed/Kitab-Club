@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const bookSchema = new mongoose.Schema({
   title: {
@@ -6,6 +7,7 @@ const bookSchema = new mongoose.Schema({
     required: [true, 'A book must have a title!'],
     unique: true,
   },
+  slug: String,
   quote: {
     type: String,
     required: [true, 'A book must have a quote!'],
@@ -48,6 +50,13 @@ const bookSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: 'Club',
   },
+});
+
+bookSchema.index({ slug: 1 });
+
+bookSchema.pre('save', function (next) {
+  this.slug = slugify(this.title, { lower: true });
+  next();
 });
 
 const Book = mongoose.model('Book', bookSchema);

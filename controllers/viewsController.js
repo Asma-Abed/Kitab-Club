@@ -1,4 +1,5 @@
 const Club = require('./../models/clubModel');
+const Book = require('./../models/bookModel');
 const catchAsync = require('./../utils/catchAsync');
 
 exports.getHome = (req, res) => {
@@ -22,5 +23,14 @@ exports.getClub = catchAsync(async (req, res, next) => {
   res.status(200).render('club', {
     title: club.name,
     club,
+  });
+});
+
+exports.getBooks = catchAsync(async (req, res) => {
+  const books = await Book.find();
+
+  res.status(200).render('books', {
+    title: 'All Books',
+    books,
   });
 });
