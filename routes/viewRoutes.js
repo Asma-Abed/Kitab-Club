@@ -7,5 +7,6 @@ router.get('/', viewsController.getHome);
 router.get('/clubs', viewsController.getClubs);
 router.get('/books', viewsController.getBooks);
 router.get('/clubs/:slug', viewsController.getClub);
+router.get('/books/:slug', viewsController.getBook);
 
 module.exports = router;

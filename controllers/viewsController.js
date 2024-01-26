@@ -34,3 +34,15 @@ exports.getBooks = catchAsync(async (req, res) => {
     books,
   });
 });
+
+exports.getBook = catchAsync(async (req, res, next) => {
+  const book = await Book.findOne({ slug: req.params.slug }).populate({
+    path: 'club',
+    fields: 'name',
+  });
+
+  res.status(200).render('book', {
+    title: book.title,
+    book,
+  });
+});

@@ -5,7 +5,7 @@ exports.getAllBooks = handler.getAll(Book);
 
 exports.getBook = handler.getDoc(Book, 'book', {
   path: 'club',
-  select: 'name image',
+  select: 'name',
 });
 
 exports.createBook = handler.createDoc(Book);
