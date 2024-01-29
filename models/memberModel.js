@@ -2,12 +2,14 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
+const slugify = require('slugify');
 
 const memberSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Please provide your name!'],
   },
+  slug: String,
   photo: String,
   email: {
     type: String,
@@ -47,18 +49,25 @@ const memberSchema = new mongoose.Schema({
   active: { type: Boolean, default: true, select: false },
 });
 
-memberSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 12);
-  this.confirmPassword = undefined;
+memberSchema.index({ slug: 1 });
+
+memberSchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
   next();
 });
 
-memberSchema.pre('save', function (next) {
-  if (!this.isModified('password') || this.isNew) return next();
-  this.passwordChangedAt = Date.now() - 1000;
-  next();
-});
+// memberSchema.pre('save', async function (next) {
+//   if (!this.isModified('password')) return next();
+//   this.password = await bcrypt.hash(this.password, 12);
+//   this.confirmPassword = undefined;
+//   next();
+// });
+
+// memberSchema.pre('save', function (next) {
+//   if (!this.isModified('password') || this.isNew) return next();
+//   this.passwordChangedAt = Date.now() - 1000;
+//   next();
+// });
 
 memberSchema.pre(/^find/, function (next) {
   this.find({ active: { $ne: false } });

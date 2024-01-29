@@ -1,10 +1,14 @@
 const Club = require('./../models/clubModel');
 const Book = require('./../models/bookModel');
+const Member = require('./../models/memberModel');
 const catchAsync = require('./../utils/catchAsync');
 
-exports.getHome = (req, res) => {
-  res.status(200).render('home');
-};
+exports.getHome = catchAsync(async (req, res) => {
+  const clubs = await Club.find();
+  res.status(200).render('home', {
+    clubs,
+  });
+});
 
 exports.getClubs = catchAsync(async (req, res) => {
   const clubs = await Club.find();
@@ -45,4 +49,13 @@ exports.getBook = catchAsync(async (req, res, next) => {
     title: book.title,
     book,
   });
+});
+
+exports.getMember = catchAsync(async (req, res, next) => {
+  const member = await Member.findOne({ slug: req.params.slug })
+    .res.status(200)
+    .render('member', {
+      title: member.name,
+      member,
+    });
 });

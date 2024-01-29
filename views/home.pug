@@ -1,4 +1,81 @@
 extends base
 
+include _plan
+
 block content 
-  h1 homepage
+  main 
+    section.max-w-screen-xl.mx-auto.mb-28
+      .mx-24.flex.justify-between
+        .flex-col.flex.justify-between.items-start(class='lg:w-2/5 w-3/4')
+          q.text-5xl.mt-8(class='lg:text-6xl') Read in The Name of Thy Lord
+          a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='#') Choose a Club Now
+        div(class='w-2/5')
+          img(src='/img/hero.jpg' alt='') 
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14
+        | Our clubs
+      .flex.gap-40.justify-center.mb-14
+        each club in clubs.slice(0,3)
+          .w-72.h-96.border-colorPrimary.border-2.rounded.text-center.relative
+            img(src=`/img/clubs/${club.image}` alt=`${club.name}`)
+            a.px-3.w-56.bg-colorSecondary.text-white.rounded.absolute.top-80(class='py-1.5 right-1/2 translate-x-1/2' href=`/clubs/${club.slug}`) #{club.name}
+      .text-center
+        a.px-3.bg-colorPrimary.rounded.font-semibold.inline-block(class='w-1/5 py-1.5' href=`/clubs`) See All Clubs
+ 
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14
+        | How It Works
+      .flex.items-center.mx-24.gap-44.mb-20
+        div
+          p.text-5xl Sign up and choose clubs
+          p.text-5xl.mt-4 you love
+        .w-w.h-h
+          img(src='/img/how-1.jpg' alt='')
+      .flex.items-center.mx-24.gap-44.mb-20
+        .w-w.h-h
+          img(src='/img/how-2.jpg' alt='')
+        div
+          p.text-5xl You get access to all the
+          p.text-5xl.mt-4 books in each club
+      .flex.items-center.mx-24.gap-48
+        div
+          p.text-5xl Start reading with club
+          p.text-5xl.mt-4 members
+        .w-w.h-h
+          img(src='/img/how-3.jpg' alt='') 
+
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14
+        | Our Plans
+      .flex.gap-40.justify-center.mb-14
+        +plan('Free','0.00','1 club','No books access')
+        +plan('Standard','3.99','1 club','Access to free books')
+        +plan('Premium','5.99','3 clubs','Access to free books')
+
+    section.max-w-screen-xl.mx-auto
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14
+        | Why Choose Kitab Club
+      ul.px-28.flex.flex-col.gap-6.text-xl
+        li
+          svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+            use(xlink:href='img/sprite.svg#icon-check')
+          span Organized reading per topic.
+        li
+          svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+            use(xlink:href='img/sprite.svg#icon-check')
+          span Access books in each club with no extra fees.
+        li
+          svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+            use(xlink:href='img/sprite.svg#icon-check')
+          span Manager will put a schedule suitable for you.
+        li
+          svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+            use(xlink:href='img/sprite.svg#icon-check')
+          span Enjoy meaningful discussions about books you love.
+        li
+          svg.w-6.h-6.inline-block.fill-colorPrimary.mr-2
+            use(xlink:href='img/sprite.svg#icon-check')
+          span
+            | Our free plan is made for people who can get the books by
+            | themselves but want to enjoy reading with others.
