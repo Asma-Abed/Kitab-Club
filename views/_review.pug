@@ -1,8 +1,8 @@
 mixin review(review)
   .text-center.flex.flex-col.gap-3
-    div
+    a(href= `/members/${review.member.slug}`)
       img.inline-block.w-36.rounded-full(src=`/img/members/${review.member.photo}` alt='')
-    div
+    a(href= `/members/${review.member.slug}`)
       p= review.member.name
       p= review.member.job
     q= review.review

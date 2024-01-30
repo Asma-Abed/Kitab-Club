@@ -543,6 +543,11 @@ video {
   margin-right: 6rem;
 }
 
+.mx-40 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -559,6 +564,10 @@ video {
 
 .mb-14 {
   margin-bottom: 3.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-20 {
@@ -625,6 +634,10 @@ video {
   height: 333px;
 }
 
+.h-h2 {
+  height: 342px;
+}
+
 .w-1\/5 {
   width: 20%;
 }
@@ -675,6 +688,10 @@ video {
 
 .w-w {
   width: 500px;
+}
+
+.w-w2 {
+  width: 256px;
 }
 
 .max-w-screen-xl {

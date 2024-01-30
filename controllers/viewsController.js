@@ -52,10 +52,13 @@ exports.getBook = catchAsync(async (req, res, next) => {
 });
 
 exports.getMember = catchAsync(async (req, res, next) => {
-  const member = await Member.findOne({ slug: req.params.slug })
-    .res.status(200)
-    .render('member', {
-      title: member.name,
-      member,
-    });
+  const member = await Member.findOne({ slug: req.params.slug }).populate({
+    path: 'clubs',
+    fields: 'name image',
+  });
+
+  res.status(200).render('member', {
+    title: member.name,
+    member,
+  });
 });
