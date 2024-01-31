@@ -62,3 +62,15 @@ exports.getMember = catchAsync(async (req, res, next) => {
     member,
   });
 });
+
+exports.updateMyProfile = catchAsync(async (req, res, next) => {
+  res.status(200).render('account');
+});
+
+exports.login = catchAsync(async (req, res, next) => {
+  res.status(200).render('login');
+});
+
+exports.signup = catchAsync(async (req, res, next) => {
+  res.status(200).render('register');
+});
