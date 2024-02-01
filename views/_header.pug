@@ -10,6 +10,12 @@ header.max-w-screen-xl.mx-auto.flex.items-center.justify-between.mb-24.mt-4
         a(href='/clubs') Clubs
       li
         a(href='/books') Books
-      li
-        a(href='#') Login
-  a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='#') Register
+      li 
+        if member
+          a(href='/login') Logout 
+        else 
+          a(href='/login') Login 
+  if member
+    a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='/register') My profile
+  else 
+    a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='/register') Register

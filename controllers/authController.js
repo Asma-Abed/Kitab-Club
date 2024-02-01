@@ -73,6 +73,8 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.headers.authorization.startsWith('Bearer')
   ) {
     token = req.headers.authorization.split(' ')[1];
+  } else if (req.cookies.jwt) {
+    token = req.cookies.jwt;
   }
 
   if (!token) {
@@ -97,6 +99,28 @@ exports.protect = catchAsync(async (req, res, next) => {
     );
   }
   req.member = currenMember;
+  next();
+});
+
+exports.isLoggedIn = catchAsync(async (req, res, next) => {
+  if (req.cookies.jwt) {
+    const decoded = await promisify(jwt.verify)(
+      req.cookies.jwt,
+      process.env.JWT_SECRET,
+    );
+
+    const currenMember = await Member.findById(decoded.id);
+
+    if (!currenMember) {
+      return next();
+    }
+
+    if (currenMember.changedPasswordTime(decoded.iat)) {
+      return next();
+    }
+    res.locals.member = currenMember;
+    return next();
+  }
   next();
 });
 
