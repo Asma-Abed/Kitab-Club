@@ -12,10 +12,10 @@ header.max-w-screen-xl.mx-auto.flex.items-center.justify-between.mb-24.mt-4
         a(href='/books') Books
       li 
         if member
-          a(href='/login') Logout 
+          a#logout(href='/logout') Logout 
         else 
           a(href='/login') Login 
   if member
-    a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='/register') My profile
+    a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='/updateMyProfile') My profile
   else 
     a.px-3.bg-colorPrimary.rounded.font-semibold(class='py-1.5' href='/register') Register

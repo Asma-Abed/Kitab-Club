@@ -1,6 +1,7 @@
-import { login } from './login';
+import { login, logout } from './login';
 
 const loginForm = document.getElementById('form');
+const logoutButton = document.getElementById('logout');
 
 if (loginForm) {
   loginForm.addEventListener('submit', (e) => {
@@ -10,3 +11,5 @@ if (loginForm) {
     login(email, password);
   });
 }
+
+if (logoutButton) logoutButton.addEventListener('click', logout);

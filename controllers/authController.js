@@ -66,6 +66,14 @@ exports.login = catchAsync(async (req, res, next) => {
   createAndSendToken(member, 200, res);
 });
 
+exports.logout = (req, res) => {
+  res.cookie('jwt', 'loggedout', {
+    expires: new Date(Date.now() + 10 * 1000),
+    httpOnly: true,
+  });
+  res.status(200).json({ status: 'success' });
+};
+
 exports.protect = catchAsync(async (req, res, next) => {
   let token;
   if (
@@ -102,27 +110,31 @@ exports.protect = catchAsync(async (req, res, next) => {
   next();
 });
 
-exports.isLoggedIn = catchAsync(async (req, res, next) => {
+exports.isLoggedIn = async (req, res, next) => {
   if (req.cookies.jwt) {
-    const decoded = await promisify(jwt.verify)(
-      req.cookies.jwt,
-      process.env.JWT_SECRET,
-    );
+    try {
+      const decoded = await promisify(jwt.verify)(
+        req.cookies.jwt,
+        process.env.JWT_SECRET,
+      );
 
-    const currenMember = await Member.findById(decoded.id);
+      const currenMember = await Member.findById(decoded.id);
 
-    if (!currenMember) {
+      if (!currenMember) {
+        return next();
+      }
+
+      if (currenMember.changedPasswordTime(decoded.iat)) {
+        return next();
+      }
+      res.locals.member = currenMember;
+      return next();
+    } catch (error) {
       return next();
     }
-
-    if (currenMember.changedPasswordTime(decoded.iat)) {
-      return next();
-    }
-    res.locals.member = currenMember;
-    return next();
   }
   next();
-});
+};
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {

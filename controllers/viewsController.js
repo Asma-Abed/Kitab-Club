@@ -68,10 +68,7 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
 });
 
 exports.login = catchAsync(async (req, res, next) => {
-  res
-    .status(200)
-    .set('Content-Security-Policy', "connect-src 'self' http://127.0.0.1:3000/")
-    .render('login');
+  res.status(200).render('login');
 });
 
 exports.signup = catchAsync(async (req, res, next) => {
