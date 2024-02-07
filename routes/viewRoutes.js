@@ -22,6 +22,7 @@ router.get(
 router.get('/updateMyProfile', viewsController.updateMyProfile);
 
 router.get('/login', viewsController.login);
+router.get('/logout', viewsController.logout);
 router.get('/register', viewsController.signup);
 
 module.exports = router;
