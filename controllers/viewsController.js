@@ -51,6 +51,11 @@ exports.getBook = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getMyProfile = (req, res, next) => {
+  req.params.slug = req.member.slug;
+  next();
+};
+
 exports.getMember = catchAsync(async (req, res, next) => {
   const member = await Member.findOne({ slug: req.params.slug }).populate({
     path: 'clubs',
