@@ -26,13 +26,13 @@ if (logoutButton) logoutButton.addEventListener('click', logout);
 if (updateForm)
   updateForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = nameEl.value ? nameEl.value : nameEl.placeholder;
-    const email = emailEl.value ? emailEl.value : emailEl.placeholder;
-    const job = jobEl.value ? jobEl.value : jobEl.placeholder;
-    const bio = bioEl.value ? bioEl.value : bioEl.placeholder;
-    const fb = fbEl.value ? fbEl.value : fbEl.placeholder;
-    const ins = insEl.value ? insEl.value : insEl.placeholder;
-    const tw = twEl.value ? twEl.value : twEl.placeholder;
+    const name = nameEl.value;
+    const email = emailEl.value;
+    const job = jobEl.value;
+    const bio = bioEl.value;
+    const fb = fbEl.value;
+    const ins = insEl.value;
+    const tw = twEl.value;
     const social = [fb, ins, tw];
 
     updateProfile(name, email, job, bio, social);

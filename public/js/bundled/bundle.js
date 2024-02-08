@@ -4176,13 +4176,13 @@ if (loginForm) {
 if (logoutButton) logoutButton.addEventListener('click', _login__WEBPACK_IMPORTED_MODULE_0__.logout);
 if (updateForm) updateForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  var name = nameEl.value ? nameEl.value : nameEl.placeholder;
-  var email = emailEl.value ? emailEl.value : emailEl.placeholder;
-  var job = jobEl.value ? jobEl.value : jobEl.placeholder;
-  var bio = bioEl.value ? bioEl.value : bioEl.placeholder;
-  var fb = fbEl.value ? fbEl.value : fbEl.placeholder;
-  var ins = insEl.value ? insEl.value : insEl.placeholder;
-  var tw = twEl.value ? twEl.value : twEl.placeholder;
+  var name = nameEl.value;
+  var email = emailEl.value;
+  var job = jobEl.value;
+  var bio = bioEl.value;
+  var fb = fbEl.value;
+  var ins = insEl.value;
+  var tw = twEl.value;
   var social = [fb, ins, tw];
   (0,_updateProfile__WEBPACK_IMPORTED_MODULE_1__.updateProfile)(name, email, job, bio, social);
 });
