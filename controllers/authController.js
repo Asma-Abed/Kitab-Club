@@ -107,6 +107,7 @@ exports.protect = catchAsync(async (req, res, next) => {
     );
   }
   req.member = currenMember;
+  res.locals.member = currenMember;
   next();
 });
 

@@ -20,9 +20,12 @@ block content
                 use(xlink:href='/img/sprite.svg#icon-instagram')
             a(href=`https://www.${member.social[1]}`)
               svg.w-6.h-6.inline-block.fill-colorSecondary.mr-2
-                use(xlink:href='/img/sprite.svg#icon-twitter')
+                use(xlink:href='/img/sprite.svg#icon-twitter') 
+          if isMyProfile 
+            a.px-3.w-44.bg-colorPrimary.text-center.font-semibold.rounded(class='py-1.5' href='/updateMyProfile') Update profile
         .w-w2.h-h2
-          img(src=`/img/members/${member.photo}` alt=`${member.name}`)
+          img(src=`/img/members/${member.photo}` alt=`${member.name}`) 
+      
 
     section.max-w-screen-xl.mx-auto.mb-28
       h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14

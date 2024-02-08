@@ -7,37 +7,38 @@ block content
         | Update your settings
       .flex.flex-col.gap-20.mx-16
         .h-h4.border-colorPrimary.border-2.rounded.mx-auto(class='w-3/4')
-          form.flex.gap-20.mb-10.mt-4.mx-8
-            .flex.flex-col.gap-6(class='w-1/2')
-              .flex.flex-col.mb-2
-                label(for='email') Name
-                input#email.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='email' placeholder='Name')
-              .flex.flex-col.mb-2
-                label(for='email') Email
-                input#email.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='email' placeholder='Email')
-              .flex.flex-col.mb-8
-                label(for='email') Profession
-                input#email.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='email' placeholder='Enter your profession')
-              .flex.items-center.justify-start.gap-6
-                div
-                  img.w-20.rounded-full(src='img/member-1.jpg' alt='')
-                label.inline-block.w-44.h-8.border-2.border-colorSecondary.rounded.cursor-pointer.text-center(for='photo') Upload photo
-                input#photo.opacity-0.cursor-pointer.absolute.w-36.h-8.overflow-hidden.-z-10(type='file' accept='image/*')
-            .flex.flex-col.gap-4(class='w-1/2')
-              .flex.flex-col
-                label(for='bio') Bio
-                textarea#bio.border-colorSecondary.border-2.rounded.w-full.px-3(type='text' rows='5' maxlength='250' placeholder='Tell us about yourself')
-              .flex.flex-col
-                label(for='urlfb') Facebook
-                input#urlfb.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='url' placeholder='https://facebook.com/username' pattern='https://.*')
-              .flex.flex-col
-                label(for='urlin') Instagram
-                input#urlin.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='url' placeholder='https://instagram.com/username' pattern='https://.*')
-              .flex.flex-col
-                label(for='urltw') Twitter
-                input#urltw.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='url' placeholder='https://twitter.com/username' pattern='https://.*')
-          .text-center
-            a.px-3.h-10.bg-colorPrimary.rounded.inline-block.text-center(class='py-1.5 w-1/2' href='#') Save settings
+          form#update.mt-4.mx-8
+            .flex.gap-20.mb-10
+              .flex.flex-col.gap-6(class='w-1/2')
+                .flex.flex-col.mb-2
+                  label(for='name') Name
+                  input#name.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='text' placeholder=`${member.name}`)
+                .flex.flex-col.mb-2
+                  label(for='email') Email
+                  input#email.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='email' placeholder=`${member.email}`)
+                .flex.flex-col.mb-8
+                  label(for='job') Profession
+                  input#job.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='text' placeholder=`${member.job}`)
+                .flex.items-center.justify-start.gap-6
+                  div
+                    img.w-20.rounded-full(src=`/img/members/${member.photo}` alt=`${member.name}`)
+                  label.inline-block.w-44.h-8.border-2.border-colorSecondary.rounded.cursor-pointer.text-center(for='photo') Upload photo
+                  input#photo.opacity-0.cursor-pointer.absolute.w-36.h-8.overflow-hidden.-z-10(type='file' accept='image/*')
+              .flex.flex-col.gap-4(class='w-1/2')
+                .flex.flex-col
+                  label(for='bio') Bio
+                  textarea#bio.border-colorSecondary.border-2.rounded.w-full.px-3(type='text' rows='5' maxlength='250' placeholder=`${member.bio}`)
+                .flex.flex-col
+                  label(for='urlfb') Facebook
+                  input#urlfb.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='text' placeholder=`${member.social[0]}`)
+                .flex.flex-col
+                  label(for='urlin') Instagram
+                  input#urlin.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='text' placeholder=`${member.social[1]}`)
+                .flex.flex-col
+                  label(for='urltw') Twitter
+                  input#urltw.border-colorSecondary.border-2.rounded.w-full.h-10.px-3(type='text' placeholder=`${member.social[2]}`)
+            .text-center
+              button.px-3.h-10.bg-colorPrimary.rounded.inline-block.text-center(class='py-1.5 w-2/5' href='#') Save settings
         .h-h3.border-colorPrimary.border-2.rounded.text-center.mx-auto(class='w-1/2')
           form.flex.flex-col.gap-6.mb-10.mt-4
             .flex.flex-col.items-center
@@ -45,8 +46,8 @@ block content
               input#passowrd.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
             .flex.flex-col.items-center
               label(for='password') New password
-              input#passowrd.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
+              input#passowrdNew.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
             .flex.flex-col.items-center
               label(for='password') Confirm password
-              input#passowrd.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
+              input#passowrdConf.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
           a.px-3.h-10.bg-colorPrimary.rounded.inline-block(class='py-1.5 w-2/3' href='#') Save password

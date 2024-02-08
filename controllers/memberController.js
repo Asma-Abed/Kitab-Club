@@ -26,7 +26,14 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
     );
   }
 
-  const filteredBody = filterObject(req.body, 'name', 'email', 'job', 'bio');
+  const filteredBody = filterObject(
+    req.body,
+    'name',
+    'email',
+    'job',
+    'bio',
+    'social',
+  );
   const updatedMemeber = await Member.findByIdAndUpdate(
     req.member.id,
     filteredBody,
