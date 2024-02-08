@@ -8,5 +8,5 @@ mixin review(review)
     q= review.review
     div
       each star in [1,2,3,4,5]
-        svg.w-6.h-6.inline-block(class=`fill-${review.rating >= star ? 'colorPrimary' : 'gray-300'}`)
+        svg.w-6.h-6.inline-block(class=`${review.rating >= star ? 'fill-colorPrimary' : 'fill-gray-300'}`)
           use(xlink:href='/img/sprite.svg#icon-star-empty')

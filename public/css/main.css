@@ -897,6 +897,10 @@ video {
   fill: #093D65;
 }
 
+.fill-gray-300 {
+  fill: #d1d5db;
+}
+
 .p-6 {
   padding: 1.5rem;
 }
