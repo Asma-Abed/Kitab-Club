@@ -3,6 +3,7 @@ import { updateProfile } from './updateProfile';
 
 const loginForm = document.getElementById('form');
 const logoutButton = document.getElementById('logout');
+
 const updateForm = document.getElementById('update');
 const nameEl = document.getElementById('name');
 const emailEl = document.getElementById('email');
@@ -11,6 +12,8 @@ const bioEl = document.getElementById('bio');
 const fbEl = document.getElementById('urlfb');
 const insEl = document.getElementById('urlin');
 const twEl = document.getElementById('urltw');
+
+const passwordForm = document.getElementById('password-update');
 
 if (loginForm) {
   loginForm.addEventListener('submit', (e) => {
@@ -35,5 +38,20 @@ if (updateForm)
     const tw = twEl.value;
     const social = [fb, ins, tw];
 
-    updateProfile(name, email, job, bio, social);
+    updateProfile({ name, email, job, bio, social }, 'Profile');
+  });
+
+if (passwordForm)
+  passwordForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    document.getElementById('save-password').textContent = 'Updating...';
+    const passwordCur = document.getElementById('passowrd').value;
+    const newPassword = document.getElementById('passowrdNew').value;
+    const passwordCon = document.getElementById('passowrdConf').value;
+    await updateProfile({ passwordCur, newPassword, passwordCon }, 'Password');
+    document.getElementById('save-password').textContent = 'Save password';
+
+    document.getElementById('passowrd').value = '';
+    document.getElementById('passowrdNew').value = '';
+    document.getElementById('passowrdConf').value = '';
   });

@@ -40,14 +40,15 @@ block content
             .text-center
               button.px-3.h-10.bg-colorPrimary.rounded.inline-block.text-center(class='py-1.5 w-2/5' href='#') Save settings
         .h-h3.border-colorPrimary.border-2.rounded.text-center.mx-auto(class='w-1/2')
-          form.flex.flex-col.gap-6.mb-10.mt-4
+          form#password-update.flex.flex-col.gap-6.mb-10.mt-4
             .flex.flex-col.items-center
               label(for='password') Current password
               input#passowrd.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
             .flex.flex-col.items-center
-              label(for='password') New password
+              label(for='passowrdNew') New password
               input#passowrdNew.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
             .flex.flex-col.items-center
-              label(for='password') Confirm password
+              label(for='passowrdConf') Confirm password
               input#passowrdConf.border-colorSecondary.border-2.rounded.h-10.px-3(class='w-2/3' type='password' placeholder='••••••••')
-          a.px-3.h-10.bg-colorPrimary.rounded.inline-block(class='py-1.5 w-2/3' href='#') Save password
+            .text-center 
+              button#save-password.px-3.h-10.bg-colorPrimary.rounded.inline-block(class='py-1.5 w-2/3' href='#') Save password
