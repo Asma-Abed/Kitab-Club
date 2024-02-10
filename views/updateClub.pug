@@ -1,0 +1,39 @@
+extends base 
+
+block content 
+  main 
+    section.max-w-screen-xl.mx-auto.mb-28
+      h3.text-center.text-4xl.uppercase.text-colorSecondary.mb-14
+        | Update Club
+      .flex.flex-col.gap-20.mx-16
+        .border-colorPrimary.border-2.rounded.mx-auto(class='w-3/4')
+          form#update.mt-4.mx-8
+            .flex.gap-20.mb-10
+              .flex.flex-col.gap-6(class='w-1/2')
+                .flex.flex-col
+                  label(for='name') Club name
+                  input#name.border-colorSecondary.border-2.rounded.w-full.h-10.px-3.text-gray-400(type='text' value=`${club.name}`)
+                .flex.flex-col
+                  label(for='nBooks') Number of books
+                  input#nBooks.border-colorSecondary.border-2.rounded.w-full.h-10.px-3.text-gray-400(type='email' value=`${club.booksNumber}`)
+                .flex.flex-col
+                  label(for='time') Estimated time
+                  input#time.border-colorSecondary.border-2.rounded.w-full.h-10.px-3.text-gray-400(type='text' value=`${club.time}`)
+                .flex.flex-col
+                  label(for='manager') Club manager
+                  input#manager.border-colorSecondary.border-2.rounded.w-full.h-10.px-3.text-gray-400(type='text' value=`${club.manager.name}`)
+                .flex.flex-col
+                  label(for='ideas') Club books
+                  textarea#ideas.border-colorSecondary.border-2.rounded.w-full.px-3.text-gray-400(type='text' rows='7' maxlength='350') #{club.books.map(el=> el.title).join('\n')}
+              .flex.flex-col.gap-4(class='w-1/2')
+                .flex.flex-col
+                  label(for='quote') Club quote
+                  textarea#quote.border-colorSecondary.border-2.rounded.w-full.px-3.text-gray-400(type='text' rows='3' maxlength='250') #{club.quote}
+                .flex.flex-col
+                  label(for='description') Club description
+                  textarea#description.border-colorSecondary.border-2.rounded.w-full.px-3.text-gray-400(type='text' rows='5' maxlength='250') #{club.description}
+                .flex.flex-col
+                  label(for='ideas') Club main ideas
+                  textarea#ideas.border-colorSecondary.border-2.rounded.w-full.px-3.text-gray-400(type='text' rows='7' maxlength='350') #{club.benefits.join('\n')}
+            .text-center
+              button.px-3.h-10.bg-colorPrimary.rounded.inline-block.text-center.mb-4(class='py-1.5 w-2/5' href='#') Save club

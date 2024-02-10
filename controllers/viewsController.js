@@ -35,6 +35,17 @@ exports.getClub = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.updateClub = catchAsync(async (req, res, next) => {
+  const club = await Club.findOne({ slug: req.params.slug }).populate({
+    path: 'manager books',
+    fields: 'name title',
+  });
+  res.status(200).render('updateClub', {
+    title: 'Update Club',
+    club,
+  });
+});
+
 exports.getBooks = catchAsync(async (req, res) => {
   const books = await Book.find();
 

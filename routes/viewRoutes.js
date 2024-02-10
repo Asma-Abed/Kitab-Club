@@ -22,6 +22,13 @@ router.get(
   viewsController.updateAndSubmitProfile,
 );
 
+router.get(
+  '/clubs/:slug/update',
+  authController.protect,
+  authController.restrictTo('admin', 'manager'),
+  viewsController.updateClub,
+);
+
 router.use(authController.isLoggedIn);
 
 router.get('/', viewsController.getHome);
