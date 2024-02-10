@@ -9,5 +9,8 @@ block content
           .w-72.h-96.border-colorPrimary.border-2.rounded.text-center.relative
             img(src=`/img/clubs/${club.image}` alt='')
             a.px-3.w-56.bg-colorSecondary.text-white.rounded.absolute.top-80(class='py-1.5 right-1/2 translate-x-1/2' href=`/clubs/${club.slug}`) #{club.name}
+      if (member.role === 'admin' || member.role === 'manager')
+       .text-center
+          a.px-3.bg-colorPrimary.rounded.font-semibold.inline-block(class='w-1/5 py-1.5' href=`/clubs`) Add Club
          
           

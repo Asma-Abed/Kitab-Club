@@ -8,8 +8,14 @@ block content
       .mx-24.flex.justify-between
         .flex-col.flex.justify-between
           h1.text-2xl.text-colorPrimary.font-semibold #{club.name}
-          q.text-3xl.mt-8.w-w #{club.quote}
-          a.w-36.px-3.bg-colorPrimary.rounded.mb-8.font-semibold.text-center(class='py-1.5' href='#') Join Now
+          q.text-3xl.w-w #{club.quote}
+          .flex.gap-2
+            if member
+              a.w-36.px-3.bg-colorPrimary.rounded.font-semibold.text-center(class='py-1.5' href='#') #{member.role === 'admin' || member.role === 'manager' ? 'Update Club' : 'Join Now'} 
+              if (member.role === 'admin' || member.role === 'manager') 
+                a.w-36.px-3.bg-colorPrimary.rounded.font-semibold.text-center(class='py-1.5' href='#') Delete Club
+            else 
+              a.w-36.px-3.bg-colorPrimary.rounded.font-semibold.text-center(class='py-1.5' href='#') Join Now
         .w-w.h-h
           img(src=`/img/clubs/${club.imagePage}` alt='')
 
