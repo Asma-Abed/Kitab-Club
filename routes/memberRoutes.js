@@ -36,4 +36,6 @@ router
   .patch(authController.restrictTo('admin'), memberController.updateMember)
   .delete(authController.restrictTo('admin'), memberController.deleteMember);
 
+router.get('/manager/:slug', memberController.getManager);
+
 module.exports = router;

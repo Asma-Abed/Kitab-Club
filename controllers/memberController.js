@@ -13,6 +13,7 @@ const filterObject = (obj, ...fields) => {
 
 exports.getMyProfile = (req, res, next) => {
   req.params.id = req.member.id;
+  res.locals.isMyProfile = true;
   next();
 };
 
@@ -68,3 +69,18 @@ exports.createMember = handler.createDoc(Member);
 exports.updateMember = handler.updateDoc(Member, 'member');
 
 exports.deleteMember = handler.deleteDoc(Member, 'member');
+
+exports.getManager = catchAsync(async (req, res, next) => {
+  const manager = await Member.findOne({ slug: req.params.slug });
+
+  if (!manager) {
+    return next(new AppError(`No manager found for this name`, 404));
+  }
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      manager,
+    },
+  });
+});

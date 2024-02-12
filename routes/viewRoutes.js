@@ -16,11 +16,11 @@ router.get(
   viewsController.updateMyProfile,
 );
 
-router.get(
-  '/updateAndSubmitProfile',
-  authController.protect,
-  viewsController.updateAndSubmitProfile,
-);
+// router.get(
+//   '/updateAndSubmitProfile',
+//   authController.protect,
+//   viewsController.updateAndSubmitProfile,
+// );
 
 router.get(
   '/clubs/:slug/update',

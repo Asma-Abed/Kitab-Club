@@ -95,26 +95,26 @@ exports.updateMyProfile = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.updateAndSubmitProfile = catchAsync(async (req, res, next) => {
-  const updatedMember = await Member.findByIdAndUpdate(
-    req.member.id,
-    {
-      name: req.body.name,
-      email: req.body.email,
-      job: req.body.job,
-      bio: req.body.bio,
-      social: req.body.social,
-    },
-    {
-      new: true,
-      runValidators: true,
-    },
-  );
-  res.status(200).render('member', {
-    title: updatedMember.name,
-    member: updatedMember,
-  });
-});
+// exports.updateAndSubmitProfile = catchAsync(async (req, res, next) => {
+//   const updatedMember = await Member.findByIdAndUpdate(
+//     req.member.id,
+//     {
+//       name: req.body.name,
+//       email: req.body.email,
+//       job: req.body.job,
+//       bio: req.body.bio,
+//       social: req.body.social,
+//     },
+//     {
+//       new: true,
+//       runValidators: true,
+//     },
+//   );
+//   res.status(200).render('member', {
+//     title: updatedMember.name,
+//     member: updatedMember,
+//   });
+// });
 
 exports.login = catchAsync(async (req, res, next) => {
   res.status(200).render('login');
